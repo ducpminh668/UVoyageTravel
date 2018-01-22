@@ -31,7 +31,11 @@
 	z-index: 2;
 }
 
-@media only screen and (min-width:1200px){
+.flex-checkin{
+	display: inline-flex;
+	flex-direction: row;
+}
+/*@media only screen and (min-width:1200px){
 	#banner #order{
 		position: absolute;
 		z-index: 3;
@@ -44,6 +48,20 @@
 		background-color: #f0ebebcf;
 	}
 }
+*/
+/*Xoa cai nay di khi nao hoan thien*/
+#banner #order{
+		position: absolute;
+		z-index: 3;
+		left: 50%;
+		top: 50%;
+		height: 130px;
+		width: 1140px;
+		margin-left: -570px;
+		margin-top: 65px;
+		background-color: #f0ebebcf;
+	}
+
 #search-icon a{
 	color: #fff;
 	text-decoration: none;
@@ -82,4 +100,8 @@ input[name="in-search-diadiem"]:focus{
 	border-bottom: 1px solid #80bdff;;
 	box-shadow: none;
 	border-radius: 0;
+}
+
+input#in-date-checkin, input#in-date-checkout {
+	width: 80%;
 }
