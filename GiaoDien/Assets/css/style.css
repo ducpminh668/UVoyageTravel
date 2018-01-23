@@ -19,7 +19,6 @@
 	float: right;
 }
 
-
 #banner {
 	position: relative;
 }
@@ -31,8 +30,8 @@
 	z-index: 2;
 }
 
-@media only screen and (min-width:1200px) {
-	#banner #order{
+
+#banner #order{
 		position: absolute;
 		z-index: 3;
 		left: 50%;
@@ -43,8 +42,19 @@
 		margin-top: 65px;
 		background-color: #f0ebebcf;
 	}
-}
-#search-icon a {
+#banner #order{
+		position: absolute;
+		z-index: 3;
+		left: 50%;
+		top: 50%;
+		height: 130px;
+		width: 1140px;
+		margin-left: -570px;
+		margin-top: 65px;
+		background-color: #f0ebebcf;
+	}
+
+#search-icon a{
 	color: #fff;
 	text-decoration: none;
 	display: block;
@@ -86,6 +96,7 @@ input[name="in-search-diadiem"]:focus {
 
 input#in-date-checkin, input#in-date-checkout {
 	width: 80%;
+<<<<<<< HEAD
 }
 
 h5.module-title {
