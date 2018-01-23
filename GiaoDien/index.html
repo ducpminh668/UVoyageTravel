@@ -2,118 +2,183 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>UVoyage</title>
-    <script src="./Assets/js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8" async defer></script>
-    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Lato:400,700i|Noto+Sans:400,700|PT+Sans+Narrow&amp;subset=vietnamese" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="./Assets/libs/font-awesome/css/font-awesome.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="./Assets/libs/bxslider-4-4.2.12/src/js/jquery.bxslider.js" type="text/javascript" charset="utf-8" async defer></script>
-    <link rel="stylesheet" href="./Assets/libs/bootstrap-datetimepicker/css/bootstrap-datetimepicker.css">
-    <script src="./Assets/libs/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
-    <link rel="stylesheet" href="./Assets/libs/bxslider-4-4.2.12/src/css/jquery.bxslider.css">
-    <link rel="stylesheet" type="text/css" href="./Assets/css/style.css">
-    <script src="./Assets/js/mainscrip.js"></script>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>UVoyage</title>
+	<script src="./Assets/js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8" async defer></script>
+	<link href="https://fonts.googleapis.com/css?family=Courgette|Crimson+Text|Dancing+Script|Muli:400,700|PT+Sans:400,700,700i|Roboto+Condensed:400,700,700i|Roboto:400,700,700i|Slabo+27px&amp;subset=vietnamese" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="./Assets/libs/font-awesome/css/font-awesome.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script src="./Assets/libs/bxslider-4-4.2.12/src/js/jquery.bxslider.js" type="text/javascript" charset="utf-8" async defer></script>
+	<link rel="stylesheet" href="./Assets/libs/bootstrap-datetimepicker/css/bootstrap-datetimepicker.css">
+	<script src="./Assets/libs/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
+	<link rel="stylesheet" href="./Assets/libs/bxslider-4-4.2.12/src/css/jquery.bxslider.css">
+	<link rel="stylesheet" type="text/css" href="./Assets/css/style.css">
+	<script src="./Assets/js/mainscrip.js"></script>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
-        <a href="#" title="UVOYAGE Trip"><img id="logo-banner" src="./Assets/Images/logo.png" alt=""></a>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-            <ul class="navbar-nav mr-auto mt-2 mt-lg-0" id="nav-menu">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Trang Chủ <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">BLOG</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Đối Tác</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Ưu Đãi Đặc Biệt</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Vinpearl</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Liên Hệ</a>
-                </li>
-            </ul>
-            <!-- het nav-menu -->
-            <ul class="navbar-nav mr-3 mt-2 mt-lg-0" id="nav-menu-right">
-                <li class="nav-item" id="DangNhap">
-                    <a class="nav-link" href="#">Đăng Nhập</a>
-                </li>
-                <li class="nav-item" id="DonViTien">
-                    <a class="nav-link" href="#">VND</a>
-                </li>
-                <li class="nav-item" id="NgonNgu">
-                    <a class="nav-link" href="#">IMG</a>
-                </li>
-            </ul>
-            <!-- het nav-menu-right -->
-        </div>
-    </nav>
-    <!-- hết navbar -->
+		<a href="#" title="UVOYAGE Trip"><img id="logo-banner" src="./Assets/Images/logo.png" alt=""></a>
+		<div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+			<ul class="navbar-nav mr-auto mt-2 mt-lg-0" id="nav-menu">
+				<li class="nav-item active">
+					<a class="nav-link" href="#">Trang Chủ <span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">BLOG</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Đối Tác</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Ưu Đãi Đặc Biệt</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Vinpearl</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Liên Hệ</a>
+				</li>
+			</ul>
+			<!-- het nav-menu -->
+			<ul class="navbar-nav mr-3 mt-2 mt-lg-0" id="nav-menu-right">
+				<li class="nav-item" id="DangNhap">
+					<a class="nav-link" href="#">Đăng Nhập</a>
+				</li>
+				<li class="nav-item" id="DonViTien">
+					<a class="nav-link" href="#">VND</a>
+				</li>
+				<li class="nav-item" id="NgonNgu">
+					<a class="nav-link" href="#">IMG</a>
+				</li>
+			</ul>
+			<!-- het nav-menu-right -->
+		</div>
+	</nav>
+	<!-- hết navbar -->
 
-    <div id="banner">
-        <div class="bxslider">
-            <div class="mot-banner">
-                <img src="./Assets/images/banner-1.png" title="Funky roots">
-            </div>
-            <div class="mot-banner">
-                <img src="./Assets/images/banner-2.png" title="The long and winding road">
-            </div>
+	<div id="banner">
+		<div class="bxslider">
+			<div class="mot-banner">
+				<img src="./Assets/images/banner-1.png" title="Funky roots">
+			</div>
+			<div class="mot-banner">
+				<img src="./Assets/images/banner-2.png" title="The long and winding road">
+			</div>
             <!-- <div>
 				<img src="./Assets/images/banner-1.png" title="Funky roots">
 			</div> -->
-        </div>
-        <!--Het slider-->
-        <div id="order">
-            <div class="row">
-                <div class="col-md-4" id="search-address">
-                    <p>Tìm điểm, đến khách sạn hoặc tên đường</p>
-                    <input class="form-control" type="text" name="in-search-diadiem" value="" placeholder="Tìm điểm, đến khách sạn hoặc tên đường" id="in-search-diadiem">
-                </div>
-                <div class="col-md-6" id="date-start">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <p>Ngày nhận phòng</p>
-                            <div class="row">
-                                <input type="text" readonly id="in-date-checkin">
-                                <span class="add-on" id="ic-date-checkin"><i class="fa fa-calendar-check-o" aria-hidden="true"></i></span>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <p>Ngày trả phòng</p>
-                            <div class="row">
-                                <input type="text" readonly id="in-date-checkout">
-                                <span class="add-on" id="ic-date-checkout"><i class="fa fa-calendar-check-o" aria-hidden="true"></i></span>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <p>Số phòng</p>
-                            <input type="text" name="in-search-diadiem" value="" placeholder="Tìm điểm, đến khách sạn hoặc tên đường" id="in-search-diadiem">
+		</div>
+		<!--Het slider-->
+		<div id="order">
+			<div class="row">
+				<div class="col-md-4" id="search-address">
+					<p>Tìm điểm, đến khách sạn hoặc tên đường</p>
+					<input class="form-control" type="text" name="in-search-diadiem" value="" placeholder="Tìm điểm, đến khách sạn hoặc tên đường" id="in-search-diadiem">
+				</div>
+				<div class="col-md-6" id="date-start">
+					<div class="row">
+						<div class="col-md-4">
+							<p>Ngày nhận phòng</p>
+							<div class="row">
+								<input type="text" readonly id="in-date-checkin">
+								<span class="add-on" id="ic-date-checkin"><i class="fa fa-calendar-check-o" aria-hidden="true"></i></span>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<p>Ngày trả phòng</p>
+							<div class="row">
+								<input type="text" readonly id="in-date-checkout">
+								<span class="add-on" id="ic-date-checkout"><i class="fa fa-calendar-check-o" aria-hidden="true"></i></span>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<p>Số phòng</p>
+							<input type="text" name="in-search-diadiem" value="" placeholder="Tìm điểm, đến khách sạn hoặc tên đường" id="in-search-diadiem">
 
-                        </div>
-                    </div>
+						</div>
+					</div>
 
-                </div>
-                <div class="col-md-2" id="search-icon">
-                    <a href="#" title=""><i class="fa fa-search" aria-hidden="true"></i> <strong>Tìm ngay</strong></a>
-                </div>
-            </div>
-        </div>
-        <!-- het order -->
-    </div>
-    <!-- hết banner -->
+				</div>
+				<div class="col-md-2" id="search-icon">
+					<a href="#" title=""><i class="fa fa-search" aria-hidden="true"></i> <strong>Tìm ngay</strong></a>
+				</div>
+			</div>
+		</div>
+		<!-- het order -->
+	</div>
+	<!-- hết banner -->
+	
+	<div class="khachsantheotinhthanh">
+		<div class="container">
+			<h5 class="module-title">Khách sạn theo tỉnh thành</h5>
+			<div class="row">
+				<div class="col-sm-3 motkhoikhachsan">
+					<ul class="list-unstyled">
+						<li><a href="">Khách sạn Bà Rịa - Vũng Tàu</a></li>
+						<li><a href="">Khách sạn Điện Biên</a></li>
+						<li><a href="">Khách sạn Cần Thơ</a></li>
+						<li><a href="">Khách sạn Bắc Ninh</a></li>
+						<li><a href="">Khách sạn Cà Mau</a></li>
+						<li><a href="">Khách sạn Bến Tre</a></li>
+					</ul>
+				</div> <!-- het 1 khoi khach san -->
+				<div class="col-sm-3 motkhoikhachsan">
+					<ul class="list-unstyled">
+						<li><a href="">Khách sạn Bà Rịa - Vũng Tàu</a></li>
+						<li><a href="">Khách sạn Điện Biên</a></li>
+						<li><a href="">Khách sạn Cần Thơ</a></li>
+						<li><a href="">Khách sạn Bắc Ninh</a></li>
+						<li><a href="">Khách sạn Cà Mau</a></li>
+						<li><a href="">Khách sạn Bến Tre</a></li>
+					</ul>
+				</div> <!-- het 1 khoi khach san -->
+				<div class="col-sm-3 motkhoikhachsan">
+					<ul class="list-unstyled">
+						<li><a href="">Khách sạn Bà Rịa - Vũng Tàu</a></li>
+						<li><a href="">Khách sạn Điện Biên</a></li>
+						<li><a href="">Khách sạn Cần Thơ</a></li>
+						<li><a href="">Khách sạn Bắc Ninh</a></li>
+						<li><a href="">Khách sạn Cà Mau</a></li>
+						<li><a href="">Khách sạn Bến Tre</a></li>
+					</ul>
+				</div> <!-- het 1 khoi khach san -->
+				<div class="col-sm-3 motkhoikhachsan">
+					<ul class="list-unstyled">
+						<li><a href="">Khách sạn Bà Rịa - Vũng Tàu</a></li>
+						<li><a href="">Khách sạn Điện Biên</a></li>
+						<li><a href="">Khách sạn Cần Thơ</a></li>
+						<li><a href="">Khách sạn Bắc Ninh</a></li>
+						<li><a href="">Khách sạn Cà Mau</a></li>
+						<li><a href="">Khách sạn Bến Tre</a></li>
+					</ul>
+				</div> <!-- het 1 khoi khach san -->
 
+			</div>
+		</div>
+	</div> <!-- het khach san theo tinh thanh -->
+	
+	<div class="dangkythongtin">       
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-7 khungthongtin text-white">
+					<h4 class="register-email">Nhận thông tin ưu đãi mới nhất từ chúng tôi</h4>
+					<p class="register-description">Đăng ký email để nhận thông báo về những chương trình ưu khuyến mãi hấp dẫn sớm nhất</p>
+					<div class="input-group">
+						<input type="text" class="form-control" placeholder="Nhập địa chỉ email của bạn vào đây" aria-label="Recipient's username" aria-describedby="basic-addon2">
+						<div class="input-group-append">
+							<button class="btn btn-success text-white btnDangKy" type="button">Đăng ký</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div> <!-- het dang ly thong tin -->
 
 </body>
 

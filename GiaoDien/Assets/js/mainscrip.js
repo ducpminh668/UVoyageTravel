@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    // BxSlider
     $(function () {
         var slider = $('.bxslider').bxSlider({
             mode: "fade",
@@ -10,7 +11,9 @@ $(document).ready(function () {
         }
         setInterval(showNextSlide, 9000);
     });
-
+    //End BxSlider
+    
+    //DateTimePicker cheeckin-checkout
     $("#in-date-checkin").datetimepicker({
         todayHighlight: true,
         format: 'dd-mm-yyyy',
@@ -47,4 +50,6 @@ $(document).ready(function () {
     $('#ic-date-checkout').click(function () {
         $("#in-date-checkout").datetimepicker('show');
     });
+
+    //End DateTimePicker cheeckin-checkout
 });
