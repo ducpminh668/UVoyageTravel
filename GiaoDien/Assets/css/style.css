@@ -156,6 +156,10 @@ footer.container {
 	padding-top: 40px;
 }
 
+#cam-nang-du-lich {
+    background: #f5f5f5;
+    padding: 50px;
+}
 .anh-cam-nang{
 	width: 97%;
 	height: 180px;
