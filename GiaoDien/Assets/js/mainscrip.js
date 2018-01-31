@@ -3,7 +3,9 @@ $(document).ready(function () {
     $(function () {
         var slider = $('.bxslider').bxSlider({
             mode: "fade",
-            pager: false
+            pager: false,
+            preloadImages: 'all',
+            controls : false
         });
 
         function showNextSlide() {
@@ -12,7 +14,7 @@ $(document).ready(function () {
         setInterval(showNextSlide, 9000);
     });
     //End BxSlider
-    
+
     //DateTimePicker cheeckin-checkout
     $("#in-date-checkin").datetimepicker({
         todayHighlight: true,
@@ -52,4 +54,10 @@ $(document).ready(function () {
     });
 
     //End DateTimePicker cheeckin-checkout
+
+    $('.recommended-hotels a').click(function (e) {
+        e.preventDefault();
+        $('.recommended-hotels a').removeClass('active');
+        $(this).addClass('active');
+    })
 });
