@@ -23,13 +23,11 @@ $(document).ready(function () {
         minView: 2,
         autoclose: true
     }).on('changeDate', function (ev) {
-
         var checkinTime = new Date($("#in-date-checkout").val($("#in-date-checkin").val()));
         console.log(checkinTime);
         $("#in-date-checkout").val($("#in-date-checkin").val());
         $("#in-date-checkout").datetimepicker('setStartDate', $("#in-date-checkin").val());
         $("#in-date-checkout").datetimepicker('show');
-
     });
 
     $("#in-date-checkout").datetimepicker({
@@ -55,6 +53,7 @@ $(document).ready(function () {
 
     //End DateTimePicker cheeckin-checkout
 
+    // recommended hotels
     $('.recommended-hotels a').click(function (e) {
         e.preventDefault();
         $('.recommended-hotels a').removeClass('active');

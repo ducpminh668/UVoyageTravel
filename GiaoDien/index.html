@@ -12,6 +12,7 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	<script src="./Assets/libs/bxslider-4-4.2.12/src/js/jquery.bxslider.js" type="text/javascript" charset="utf-8" async defer></script>
 	<link rel="stylesheet" href="./Assets/libs/bootstrap-datetimepicker/css/bootstrap-datetimepicker.css">
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	<script src="./Assets/libs/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
 	<link rel="stylesheet" href="./Assets/libs/bxslider-4-4.2.12/src/css/jquery.bxslider.css">
 	<link rel="stylesheet" type="text/css" href="./Assets/css/style.css">
@@ -117,7 +118,7 @@
 	<div class="recommended-hotels">
 		
 		<h2 class="module-title text-center">Deal hot cho bạn</h2>
-		<nav class="recommended-menu">
+		<nav class="recommended-menu" id="tabs">
 			<ul class="nav nav-pills justify-content-center">
 				<li class="nav-item">
 					<a class="nav-link active" href="#">Hà Nội</a>
@@ -146,33 +147,75 @@
 			</ul>
 		</nav> <!-- het recomended menu -->
 		<div class="container recomended-img">
+			<!-- <div class="row">
+				<div class="col-sm-4 mot-khoi-recommended-img">
+					<img src="./Assets/Images/hongkong1.jpg" alt="khach san hongkong1">
+					<span class="layer2"></span>
+					<span class="recomended-hotel-name">
+						<div>Empire Prestige Causeway Bay</div>
+						<div>***** 4.8/5(4,544 reviews)</div>
+					</span>
+					<div class="price">
+						sf
+					</div>
+				</div>
+			</div> -->
 			<div class="row">
-				<div class="col-sm-4 mot-khoi-recommended-img">
-					<img src="./Assets/Images/hongkong1.jpg" alt="khach san hongkong1">
-					<span class="layer2"></span>
-					<span class="recomended-hotel-name">
-						<div>Empire Prestige Causeway Bay</div>
-						<div>***** 4.8/5(4,544 reviews)</div>
-					</span>
+				<div class="col-md-4 mot-khoi-san-pham">
+					<div class="card">
+						<img class="card-img-top" src="./Assets/Images/hongkong1.jpg" alt="Card image cap">
+						<div class="card-body">
+							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						</div>
+					</div>
 				</div>
-				<div class="col-sm-4 mot-khoi-recommended-img">
-					<img src="./Assets/Images/hongkong1.jpg" alt="khach san hongkong1">
-					<span class="layer2"></span>
-					<span class="recomended-hotel-name">
-						<div>Empire Prestige Causeway Bay</div>
-						<div>***** 4.8/5(4,544 reviews)</div>
-					</span>
+				<div class="col-md-4 mot-khoi-san-pham">
+					<div class="card">
+						<img class="card-img-top" src="./Assets/Images/hongkong1.jpg" alt="Card image cap">
+						<div class="card-body">
+							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						</div>
+					</div>
 				</div>
-				<div class="col-sm-4 mot-khoi-recommended-img">
-					<img src="./Assets/Images/hongkong1.jpg" alt="khach san hongkong1">
-					<span class="layer2"></span>
-					<span class="recomended-hotel-name">
-						<div>Empire Prestige Causeway Bay</div>
-						<div>***** 4.8/5(4,544 reviews)</div>
-					</span>
+
+				<div class="col-md-4 mot-khoi-san-pham">
+					<div class="card">
+						<img class="card-img-top" src="./Assets/Images/hongkong1.jpg" alt="Card image cap">
+						<div class="card-body">
+							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4 mot-khoi-san-pham">
+					<div class="card">
+						<img class="card-img-top" src="./Assets/Images/hongkong1.jpg" alt="Card image cap">
+						<div class="card-body">
+							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4 mot-khoi-san-pham">
+					<div class="card">
+						<img class="card-img-top" src="./Assets/Images/hongkong1.jpg" alt="Card image cap">
+						<div class="card-body">
+							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4 mot-khoi-san-pham">
+					<div class="card">
+						<img class="card-img-top" src="./Assets/Images/hongkong1.jpg" alt="Card image cap">
+						<div class="card-body">
+							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						</div>
+					</div>
 				</div>
 			</div>
-		</div>
+
+		</div> <!-- het recommended-img -->
 	</div> <!-- het recommended-hotels -->
 	<!-- phần cẩm nang du lịch -->
 	<div id="cam-nang-du-lich">
