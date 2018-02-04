@@ -195,7 +195,7 @@ footer.container {
 	line-height: 20px;
 }
 .col-md-4.mot-khoi-san-pham {
-    margin:  10px 0;
+	margin:  10px 0;
 }
 .recommended-menu a {
 	color : #717171;
@@ -234,4 +234,31 @@ footer.container {
 	bottom: 50px;
 	left: 15px;
 	color: #fff;
+}
+
+.login-box {
+	padding: 20px 0;
+}
+
+.facebook-login-btn {
+	padding: 6px;
+	background: #546fae;
+	margin: 10px 0;
+	text-align: center;
+}
+
+.facebook-login-btn a {
+    color: #fff;
+    text-decoration: none;
+}
+.google-plus-login-btn {
+    padding: 6px;
+    background: #dd4d30;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.google-plus-login-btn a {
+    color: #fff;
+    text-decoration: none;
 }
