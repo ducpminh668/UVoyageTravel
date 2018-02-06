@@ -1,13 +1,16 @@
 * {
 	margin: 0px;
 	padding: 0px;
-
 }
 
 .navbar {
 	text-transform: uppercase;
 	padding: 20px 100px;
 	font-weight: bold;
+}
+
+.mainbody {
+	background-color: #f8f8f8;
 }
 
 #logo-banner {
@@ -238,6 +241,7 @@ footer.container {
 
 .login-box {
 	padding: 20px 0;
+	background-color: #fff;
 }
 
 .facebook-login-btn {
@@ -248,17 +252,89 @@ footer.container {
 }
 
 .facebook-login-btn a {
-    color: #fff;
-    text-decoration: none;
+	color: #fff;
+	text-decoration: none;
 }
 .google-plus-login-btn {
-    padding: 6px;
-    background: #dd4d30;
-    margin: 10px 0;
-    text-align: center;
+	padding: 6px;
+	background: #dd4d30;
+	margin: 10px 0;
+	text-align: center;
 }
 
 .google-plus-login-btn a {
-    color: #fff;
-    text-decoration: none;
+	color: #fff;
+	text-decoration: none;
+}
+
+.img-chitiet {
+	position:  relative;
+}
+
+.motkhoichitietkhachsan {
+	border: 1px solid white;
+	box-shadow: 0px 2px 5px #666;
+	margin: 10px 0;
+	background-color: #fff;
+}
+
+.motkhoichitietkhachsan:hover{
+	border: 1px solid #009fe6;
+	cursor: pointer;
+}
+
+span.have_breakfast {
+	position:  absolute;
+	z-index: 3;
+	top: 10px;
+	left: -10px;
+	background: #0ab21b;
+	padding: 4px 15px 4px;
+	color: #fff;
+}
+
+span.have_breakfast:before {
+	content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    border: 5px solid #077812;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+}
+
+.detail-hotel h4 {
+	color: #009fe6;
+	font-size: 18px;
+}
+
+.address-hotel{
+	color: #a3a3a3;
+	font-size: 15px;
+	clear: both;
+}
+
+.price-detail {
+	color: #f96d01;
+	font-weight: 700;
+	font-size: 22px;
+}
+
+.box-price .btn-datngay{
+	color: #fff;
+	font-weight: bold;
+	border-radius: 3px;
+	background-color: #f96d01;
+	padding: 3px 50px 3px 50px;
+	text-decoration: none;
+}
+.bread-crumb {
+	background-color: #00a9e5;
+}
+.bread-crumb .breadcrumb {
+	background: none;
+}
+
+.bread-crumb .breadcrumb li a, .bread-crumb .breadcrumb li{
+	color: #fff;
 }
