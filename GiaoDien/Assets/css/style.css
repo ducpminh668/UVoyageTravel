@@ -274,8 +274,9 @@ footer.container {
 .motkhoichitietkhachsan {
 	border: 1px solid white;
 	box-shadow: 0px 2px 5px #666;
-	margin: 10px 0;
+	margin: 15px 0;
 	background-color: #fff;
+	/* padding-left: 15px; */
 }
 
 .motkhoichitietkhachsan:hover{
@@ -295,12 +296,12 @@ span.have_breakfast {
 
 span.have_breakfast:before {
 	content: '';
-    position: absolute;
-    left: 0;
-    bottom: -10px;
-    border: 5px solid #077812;
-    border-bottom-color: transparent;
-    border-left-color: transparent;
+	position: absolute;
+	left: 0;
+	bottom: -10px;
+	border: 5px solid #077812;
+	border-bottom-color: transparent;
+	border-left-color: transparent;
 }
 
 .detail-hotel h4 {
@@ -337,4 +338,27 @@ span.have_breakfast:before {
 
 .bread-crumb .breadcrumb li a, .bread-crumb .breadcrumb li{
 	color: #fff;
+}
+
+.khoi-booking {
+	background-color: #fff;
+	border: 1px solid #f8f8f8;
+	box-shadow: 0px 2px 2px #e4d8d8;
+	margin-bottom: 20px;
+}
+
+.khoi-booking .noidung-khoibooking {
+	padding: 20px;
+}
+.content-danhsachkstrai {
+	padding: 0 0;
+}
+
+
+.content-danhsachksphai {
+	padding-left: 30px;
+}
+
+div#slider-range {
+    margin-top: 10px;
 }

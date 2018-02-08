@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Uvoyage</title>
+    <script src="./Assets/js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8" async defer></script>
+    <link href="https://fonts.googleapis.com/css?family=Courgette|Crimson+Text|Dancing+Script|Muli:400,700|PT+Sans:400,700,700i|Roboto+Condensed:400,700,700i|Roboto:400,700,700i|Slabo+27px&amp;subset=vietnamese" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./Assets/libs/font-awesome/css/font-awesome.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="./Assets/libs/bxslider-4-4.2.12/src/js/jquery.bxslider.js" type="text/javascript" charset="utf-8" async defer></script>
+    <link rel="stylesheet" href="./Assets/libs/bootstrap-datetimepicker/css/bootstrap-datetimepicker.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="./Assets/libs/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
+    <link rel="stylesheet" href="./Assets/libs/bxslider-4-4.2.12/src/css/jquery.bxslider.css">
+    <link rel="stylesheet" type="text/css" href="./Assets/css/style.css">
+    <script src="./Assets/js/mainscrip.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a href="#" title="UVOYAGE Trip"><img id="logo-banner" src="./Assets/Images/logo.png" alt=""></a>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0" id="nav-menu">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Trang Chủ <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">BLOG</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Đối Tác</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Ưu Đãi Đặc Biệt</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Vinpearl</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Liên Hệ</a>
+                </li>
+            </ul>
+            <!-- het nav-menu -->
+            <ul class="navbar-nav mr-3 mt-2 mt-lg-0" id="nav-menu-right">
+                <li class="nav-item" id="DangNhap">
+                    <a class="nav-link" href="#">Đăng Nhập</a>
+                </li>
+                <li class="nav-item" id="DonViTien">
+                    <a class="nav-link" href="#">VND</a>
+                </li>
+                <li class="nav-item" id="NgonNgu">
+                    <a class="nav-link" href="#">IMG</a>
+                </li>
+            </ul>
+            <!-- het nav-menu-right -->
+        </div>
+    </nav>
+    <!-- hết navbar -->
+
+    <div class="bread-crumb">
+        <div class="container">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+                <li class="breadcrumb-item active">Thanh toán</li>
+            </ol>
+        </div>      
+    </div> <!-- het breadcrumb -->
+
+    <div class="noidungthanhtoan">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="hidden-xs">Nhập thông tin chi tiết của bạn</p>
+                    <form action="">
+                        <input class="form-control" type="text" name="" size="30" maxlength="50" value="" placeholder="Họ và tên đệm*" aria-required="true" required="required" aria-invalid="true">
+                        <input class="form-control" type="text" id="name" name="" size="30" maxlength="50" value="" placeholder="Tên*" aria-required="true" required="required" aria-invalid="true">
+                        <input class="form-control" type="text" id="phone" name="" size="30" maxlength="50" value="" placeholder="Số Điện Thoại*" aria-required="true" required="required" aria-invalid="true">
+                        <input class="form-control" type="text" id="email" name="" size="30" maxlength="50" value="" placeholder="Email*" aria-required="true" required="required" aria-invalid="true">
+                        <p class="request-notice"> 
+                            <span style="" class="fa fa-question-circle"></span> Tôi có thêm yêu cầu khác
+                        </p>
+                        <textarea name="notes" id="customerCustomRequest" class="form-control" cols="45" rows="4" placeholder="" aria-invalid="false" ></textarea>
+                    </form>
+                </div>
+                <div class="col-md-6">
+                    <div class="supporter row">
+                        <div class="text col-xs-12 col-sm-9"> Nếu có bất kỳ thắc mắc nào, vui lòng liên hệ với tư vấn viên UVoyageTravel.vn theo hotline miễn phí : 0485693546854</div>
+
+                        <div class="hidden-xs col-sm-3">
+                            <img src="./Assets/images/iconsupporter.jpg">
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="container">
+        <div class="row">
+            <div class="col-md-4 col-sm-3">
+                <img src="./Assets/Images/logo-12trip.png" alt="">
+                <p>Đặt phòng trực tuyến giá rẻ</p>
+                <p>Tên đơn vị: CÔNG TY CỔ PHẦN UVOYAGE</p>
+                <p>Địa chỉ: Tầng 3, Tòa nhà VTC Online, Phường Minh Khai, Quận Hai Bà Trưng, Thành phố Hà Nội, Việt Nam</p>
+                <p>Số ĐKKD: 0107713518</p>
+            </div>
+            <div class="col-md-2 col-sm-2 footer-sitemap">
+                <div class="footer-title">WEBSITE</div>
+                <ul class="footer-menu list-unstyled">
+                    <li><a href="">Trang chủ</a></li>
+                    <li><a href="">Blog</a></li>
+                    <li><a href="">Liên hệ</a></li>
+                </ul>
+            </div>
+            <div class="col-md-2 col-sm-2 footer-sitemap"">
+                <div class="footer-title">KHÁCH HÀNG</div>
+                <ul class="footer-menu list-unstyled">
+                    <li><a href="">Về chúng tôi</a></li>
+                    <li><a href="">Chính sách bảo mật</a></li>
+                    <li><a href="">Điều khoản sử dụng</a></li>
+                    <li><a href="">Chính sách trả góp</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4 col-sm-5 footer-sitemap"">
+                <div class="footer-title">LIÊN HỆ</div>
+                <ul class="footer-menu list-unstyled">
+                    <li>Chúng tôi luôn sẵn sàng hỗ trợ bạn tốt nhất mọi vấn đề xảy ra qua tổng đài hỗ trợ và qua e-mail.</li>
+                    <li>
+                        <a class="tel" href="">02462690239</a> | <a class="tel" href="">infor@12trip.vn</a> | <a href=""><span class="fa-facebook-square fa" style="color: #24a6f8;"></span></a>
+                    </li>
+                    <li>Hotline: <a class="tel" href="">0965798466 </a></li>
+                </ul>
+            </div>
+        </div>
+    </footer> <!-- het footer -->
+</body>
+
+</html>
