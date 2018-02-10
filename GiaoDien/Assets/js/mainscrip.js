@@ -1,20 +1,4 @@
 $(document).ready(function () {
-    // BxSlider
-    $(function () {
-        var slider = $('.bxslider').bxSlider({
-            mode: "fade",
-            pager: false,
-            preloadImages: 'all',
-            controls : false
-        });
-
-        function showNextSlide() {
-            slider.goToNextSlide();
-        }
-        setInterval(showNextSlide, 9000);
-    });
-    //End BxSlider
-
     //DateTimePicker cheeckin-checkout
     $("#in-date-checkin").datetimepicker({
         todayHighlight: true,

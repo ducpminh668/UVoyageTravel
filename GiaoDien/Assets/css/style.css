@@ -1,7 +1,4 @@
-* {
-	margin: 0px;
-	padding: 0px;
-}
+*{margin: 0px;padding: 0px;}
 
 .navbar {
 	text-transform: uppercase;
@@ -360,5 +357,68 @@ span.have_breakfast:before {
 }
 
 div#slider-range {
-    margin-top: 10px;
+	margin-top: 10px;
 }
+
+.supporter .support-icon {
+	width: 90px;
+	height: 90px;
+	border-radius: 50%;
+}
+
+.supporter .text {
+	padding: 15px 30px;
+	font-size: 14px;
+}
+
+.room-info {
+	padding: 0 15px;
+}
+
+.room-info .room-content {
+	font-size: 14px;
+}
+span.hotel-rating {
+	height: 14px;
+	width: 74px;
+	background-image: url(../Images/rating.png);
+	display: block;
+}
+
+.rooms .head-column {
+	overflow: hidden;
+	margin: 0 15px 15px 15px;
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 5px;
+}
+
+.btn-coupon-apply {
+	color: #333;
+	font-size: 14px;
+	background-image: linear-gradient(to bottom,#ffffff,#f3f3f3);
+	padding: 6px 25px;
+	border: 1px solid #ccc;
+}
+
+.room-info .room-total {
+    overflow: hidden;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.room-info .room-total .tright {
+    color: #ff0e09;
+    float: right;
+}
+
+/*for ratting*/
+
+.star5, .star5-0 {
+	background-position: 0 -126px;
+}
+
+li label {
+	display: inline;
+}
+
+/*End for rating*/
