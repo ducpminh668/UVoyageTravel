@@ -8,6 +8,8 @@
 
 .mainbody {
 	background-color: #f8f8f8;
+	margin-top: -16px;
+	padding: 20px 0;
 }
 
 #logo-banner {
@@ -383,6 +385,7 @@ span.hotel-rating {
 	width: 74px;
 	background-image: url(../Images/rating.png);
 	display: block;
+	background-repeat: no-repeat;
 }
 
 .rooms .head-column {
@@ -401,14 +404,18 @@ span.hotel-rating {
 }
 
 .room-info .room-total {
-    overflow: hidden;
-    font-size: 20px;
-    line-height: 30px;
+	overflow: hidden;
+	font-size: 20px;
+	line-height: 30px;
 }
 
 .room-info .room-total .tright {
-    color: #ff0e09;
-    float: right;
+	color: #ff0e09;
+	float: right;
+}
+
+li label {
+	display: inline;
 }
 
 /*for ratting*/
@@ -417,8 +424,56 @@ span.hotel-rating {
 	background-position: 0 -126px;
 }
 
-li label {
-	display: inline;
+.star4 {
+	background-position: 0 -98px;
 }
 
+
 /*End for rating*/
+
+.btnDatNgay {
+	display: block;
+    background-color: #f96d01;
+    width: 100%;
+    padding: 8px 20px;
+    overflow: visible;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 3px;
+    -webkit-transition: all .1s ease;
+    transition: all .1s ease;
+    line-height: 1;
+    font-weight: 700;
+}
+
+.container_map {
+	overflow: hidden;
+	position: relative;
+	height: 543px;
+}
+
+.container_map img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+}
+
+.container_map .btn-zoom-map {
+	position: absolute;
+	z-index: 3;
+	background: linear-gradient(-180deg,white 0%,#e2e2e2 100%);
+	box-shadow: 0 0 3px 1px rgba(0,0,0,.1);
+	bottom: 10px;
+	left: 7px;
+	font-size: 13px;
+	right: 7px;
+	border: none;
+	padding: 5px 0;
+	text-align:  center;
+	text-decoration:  none;
+	color: #333;
+}
