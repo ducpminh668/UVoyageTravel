@@ -1,5 +1,96 @@
 *{margin: 0px;padding: 0px;}
 
+.room-breakfast {
+    line-height: 28px;
+}
+
+p.minprice {
+    color: #ed1b24;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+p.minprrice_discount {
+    text-decoration: line-through;
+    color: #7d7d7d;
+    margin: 18px 0 6px 0;
+}
+
+td.detail-select-room {
+    width:  9%;
+}
+
+td.detail-description {
+    width: 37%;
+    border-left: 0!important; 
+}
+
+tr.room_detail {
+    font-size: 15px;
+}
+
+h4.room_name {
+    font-weight: 600;
+    font-size: 16px;
+    color: #438dc4;
+}
+
+td.detail-image {
+    width:  15%;
+    border-right:  none;
+}
+
+a#trip_update {
+    color: #fff;
+    border-radius: 0;
+    font-size: 14px;
+    padding: 6px 20px;
+    background: #438dc4;
+    border-bottom: 2px solid #118cc1;
+    transition: all 0.4s ease-in;
+    width: calc(100% - 5px);
+    margin-left: 10px;
+    border-radius: 3px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+}
+
+.update-hotel.row {
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.1);
+    border-radius: 3px;
+    padding: 30px 15px  12px 10px;
+}
+
+input#update-day-checkin {
+    margin-left: -23px;
+    border: none;
+    box-shadow: none;
+    background-color: #fff;
+    color: #333;
+}
+
+.khachsantheotinhthanh {
+	padding: 20px 0;
+}
+
+footer {padding-top: 50px;}
+
+.row.mot-dong-recomened-address {
+	margin: 20px 0;
+}
+
+.container.diem-dulich-noitieng {
+	padding: 30px 0;
+}
+
+.hotdeal-address {
+	position:  absolute;
+	bottom: 3px;
+	left: 7px;
+}
+
 .navbar {
 	text-transform: uppercase;
 	padding: 20px 100px;
@@ -433,20 +524,23 @@ li label {
 
 .btnDatNgay {
 	display: block;
-    background-color: #f96d01;
-    width: 100%;
-    padding: 8px 20px;
-    overflow: visible;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-    font-size: 14px;
-    text-align: center;
-    border-radius: 3px;
-    -webkit-transition: all .1s ease;
-    transition: all .1s ease;
-    line-height: 1;
-    font-weight: 700;
+	background-color: #f96d01;
+	width: 100%;
+	padding: 8px 20px;
+	border: none;
+	color: #fff;
+	cursor: pointer;
+	font-size: 14px;
+	text-align: center;
+	border-radius: 3px;
+	-webkit-transition: all .1s ease;
+	transition: all .1s ease;
+	line-height: 1;
+	font-weight: 700;
+}
+.btnDatNgay:hover {
+	text-decoration: none;
+	color: #fff;
 }
 
 .container_map {
@@ -476,4 +570,137 @@ li label {
 	text-align:  center;
 	text-decoration:  none;
 	color: #333;
+}
+
+.mot-khoi-why-us .fa {
+	color: rgba(3,169,244,.6);
+}
+
+.why-us-sub-title {
+	color: #555;
+	font-weight: 600;
+}
+.why-us-title {
+	padding: 15px 0 10px;
+	font-size: 14px;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: #000;
+}
+
+.hotdeal-today {
+	background: #f5f5f5;
+	padding-bottom: 50px;
+}
+
+.item {
+	width: 228px;
+	border: oldlace;
+	background-color: #fff;
+	position: relative;
+}
+
+.hotdeal-hotelname {
+	height: 67px;
+	padding: 5px 5px;
+	overflow: hidden;
+}
+
+.hotdeal-address .fa-map-marker{
+	color: #f7c000;
+} 
+.khoi-recommend-address {
+	position: relative;
+}
+.khoi-recommend-address img {
+	height: 250px;
+	border-radius: 3px;
+}
+
+.khoi-recommend-address .layer-gradient {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100px;
+	border-radius: 3px;
+	background: rgba(0,0,0,0) linear-gradient(to bottom,transparent 0%,rgba(0,0,0,.5) 100%) repeat scroll 0 0;
+	z-index: 2;
+}
+
+.khoi-recommend-address .recomened-add-title {
+	position: absolute;
+	bottom: 15px;
+	left: 20px;
+	color: #fff;
+	font-size: 20px;
+	font-weight: 700;
+	z-index: 3;
+}
+
+@media (max-width: 480px){
+	.khoi-recommend-address img {
+		height: 95px;
+	}
+	.khoi-recommend-address .recomened-add-title {
+		font-size: 14px;
+		bottom: 4px;
+
+	}
+	.khoi-recommend-address .layer-gradient {
+		display: none;
+	}
+}
+
+.goiy-dia-diem {
+	padding: 30px 0;
+}
+
+.goiy-dia-diem .module-title {
+	margin-left: 15px;
+}
+
+.update-room {
+	font-size: 15px;
+}
+
+span#basic-addon2 {
+    border: none;
+    box-shadow: none;
+    background-color: #fff;
+    color: #333;
+}
+
+.room-pop-detail a {
+	color: black;
+	text-decoration: none;
+}
+.room-pop-detail a:hover {
+	color: #007bff;
+}
+a.book-now-rate {
+	display: block;
+    background-color: #f96d01;
+    width: 100%;
+    padding: 6px 20px;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 3px;
+    transition: all .1s ease;
+    font-weight: 700;
+}
+
+a.book-now-rate:hover {
+	text-decoration: none;
+}
+.table td, .table th {
+	border-top: none !important;
+}
+
+td.facility {}
+.facility {
+	font-size: 13px;
+	/* line-height: 100px; */
 }

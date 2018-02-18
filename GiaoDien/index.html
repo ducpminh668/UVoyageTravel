@@ -15,12 +15,16 @@
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	<script src="./Assets/libs/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
 	<link rel="stylesheet" href="./Assets/libs/bxslider-4-4.2.12/src/css/jquery.bxslider.css">
+	<link rel="stylesheet" href="./Assets/libs/OwlCarousel2-2.2.1/dist/assets/owl.carousel.css">
+	<link rel="stylesheet" href="./Assets/libs/OwlCarousel2-2.2.1/dist/assets/owl.theme.default.css">
 	<link rel="stylesheet" type="text/css" href="./Assets/css/style.css">
+	<script src="./Assets/libs/OwlCarousel2-2.2.1/dist/owl.carousel.min.js"></script>
 	<script src="./Assets/js/mainscrip.js"></script>
 	<script type="text/javascript" src="./Assets/js/sliderscript.js"></script>
 </head>
 
 <body>
+	<!-- phan navbar -->
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
@@ -64,6 +68,7 @@
 	</nav>
 	<!-- hết navbar -->
 
+	<!-- Phan banner -->
 	<div id="banner">
 		<div class="bxslider">
 			<div class="mot-banner">
@@ -116,108 +121,173 @@
 	</div>
 	<!-- hết banner -->
 
-	<div class="recommended-hotels">
-
-		<h2 class="module-title text-center">Deal hot cho bạn</h2>
-		<nav class="recommended-menu" id="tabs">
-			<ul class="nav nav-pills justify-content-center">
-				<li class="nav-item">
-					<a class="nav-link active" href="#">Hà Nội</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Hồ Chí Minh</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Đà Nẵng</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Cần Thơ</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Huế</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Nha Trang</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Hà Giang</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Phú Quốc</a>
-				</li>
-			</ul>
-		</nav> <!-- het recomended menu -->
-		<div class="container recomended-img">
-			<!-- <div class="row">
-				<div class="col-sm-4 mot-khoi-recommended-img">
-					<img src="./Assets/Images/hongkong1.jpg" alt="khach san hongkong1">
-					<span class="layer2"></span>
-					<span class="recomended-hotel-name">
-						<div>Empire Prestige Causeway Bay</div>
-						<div>***** 4.8/5(4,544 reviews)</div>
-					</span>
-					<div class="price">
-						sf
-					</div>
+	<!-- Phần why-us -->
+	<div class="container why-us">
+		<div class="row">
+			<div class="col-md-3 mot-khoi-why-us text-center">
+				<i class="fa fa-star fa-2x" aria-hidden="true"></i>
+				<div class="why-us-title">
+					<strong>Cam kết giá tốt nhất</strong>
 				</div>
-			</div> -->
-			<div class="row">
-				<div class="col-md-4 mot-khoi-san-pham">
-					<div class="card">
-						<img class="card-img-top" src="./Assets/Images/hongkong1.jpg" alt="Card image cap">
-						<div class="card-body">
-							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4 mot-khoi-san-pham">
-					<div class="card">
-						<img class="card-img-top" src="./Assets/Images/hongkong1.jpg" alt="Card image cap">
-						<div class="card-body">
-							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-md-4 mot-khoi-san-pham">
-					<div class="card">
-						<img class="card-img-top" src="./Assets/Images/hongkong1.jpg" alt="Card image cap">
-						<div class="card-body">
-							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-md-4 mot-khoi-san-pham">
-					<div class="card">
-						<img class="card-img-top" src="./Assets/Images/hongkong1.jpg" alt="Card image cap">
-						<div class="card-body">
-							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-md-4 mot-khoi-san-pham">
-					<div class="card">
-						<img class="card-img-top" src="./Assets/Images/hongkong1.jpg" alt="Card image cap">
-						<div class="card-body">
-							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-md-4 mot-khoi-san-pham">
-					<div class="card">
-						<img class="card-img-top" src="./Assets/Images/hongkong1.jpg" alt="Card image cap">
-						<div class="card-body">
-							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-						</div>
-					</div>
+				<div class="why-us-sub-title" >
+					<p >Chúng tôi đảm bảo rằng bạn luôn nhận được phòng với mức giá ưu đãi nhất</p>
 				</div>
 			</div>
+			<div class="col-md-3 mot-khoi-why-us text-center">
 
-		</div> <!-- het recommended-img -->
-	</div> <!-- het recommended-hotels -->
+				<i class="fa fa-bed fa-2x" aria-hidden="true"></i>
+				<div class="why-us-title">
+					<strong>1.100.000+ khách sạn</strong>
+				</div>
+				<div class="why-us-sub-title">
+					<p>Chúng tôi đảm bảo rằng bạn luôn nhận được phòng với mức giá ưu đãi nhất</p>
+				</div>
+			</div>
+			<div class="col-md-3 mot-khoi-why-us text-center">
+				<i class="fa fa-credit-card fa-2x" aria-hidden="true"></i>
+				<div class="why-us-title">
+					<strong>Giá rẻ hơn</strong>
+				</div>
+				<div class="why-us-sub-title">
+					<p>So với đặt phòng trực tiếp tại khách sạn</p>
+				</div>
+			</div>
+			<div class="col-md-3 mot-khoi-why-us text-center">
+				<i class="fa fa-headphones fa-2x" aria-hidden="true"></i>
+				<div class="title1">
+					<strong>CHĂM SÓC 24/7</strong>
+				</div>
+				<div class="why-us-sub-title">
+					<p>Chúng tôi luôn sẵn sàng hỗ trợ bạn tốt nhất mọi vấn đề xảy ra</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Hết phàn why-us -->
+
+	<!-- Phan hotdeal-today -->
+	<div class="hotdeal-today">
+		<div class="container">
+			<h5 class="module-title">Khuyến mại hôm nay</h5>
+			<div class="dealtoday owl-carousel owl-theme">
+				<div class="owl-item item">
+					<a href=""><img src="./Assets/Images/today-deal-1.jpg" alt=""></a>
+					<div class="hotdeal-hotelname">Vipearl Cua Hoi Resort & Villas</div>
+					<div class="hotdeal-address"><i class="fa fa-map-marker" aria-hidden="true"></i> Cửa Lò</div>
+				</div>
+
+				<div class="owl-item item">
+					<a href=""><img src="./Assets/Images/today-deal-1.jpg" alt="" width="100%"></a>
+					<div class="hotdeal-hotelname">Vipearl Cua Hoi Resort & Villas</div>
+					<div class="hotdeal-address"><i class="fa fa-map-marker" aria-hidden="true"></i> Cửa Lò</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<script>
+		$('.owl-carousel').owlCarousel({
+			margin:20,
+			loop:true,
+			autoWidth:true,
+			items:5
+		})
+	</script>
+	<!-- Het phan hotdeal-today -->
+
+	<!-- Phan diem du lich noi tieng -->
+	<div class="container goiy-dia-diem">
+		<h5 class="module-title">Các điểm du lich nổi tiếng</h5>
+		<div class="row mot-dong-recomened-address">
+			<div class="col-md-6 col-sm-4 col-4">
+				<div class="khoi-recommend-address">
+					<a href="">
+						<img src="./Assets/Images/ha-noi.jpg" class="img-fluid" alt="">
+						<span class="layer-gradient"></span>
+						<span class="recomened-add-title">Hà Nội</span>
+					</a>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-4 col-4">
+				<div class="khoi-recommend-address">
+					<a href="">
+						<img src="./Assets/Images/ha-long.jpg" width="100%" alt="">
+						<span class="layer-gradient"></span>
+						<span class="recomened-add-title">Hạ Long</span>
+					</a>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-4 col-4">
+				<div class="khoi-recommend-address">
+					<a href="">
+						<img src="./Assets/Images/sa-pa.jpg" width="100%" alt="">
+						<span class="layer-gradient"></span>
+						<span class="recomened-add-title">Hạ Long</span>
+					</a>
+				</div>
+			</div>
+		</div> <!-- het 1 dong recommended -->
+		<div class="row mot-dong-recomened-address">
+			<div class="col-md-3 col-sm-4 col-4">
+				<div class="khoi-recommend-address">
+					<a href="">
+						<img src="./Assets/Images/ha-long.jpg" width="100%" alt="">
+						<span class="layer-gradient"></span>
+						<span class="recomened-add-title">Hạ Long</span>
+					</a>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-4 col-4">
+				<div class="khoi-recommend-address">
+					<a href="">
+						<img src="./Assets/Images/sa-pa.jpg" width="100%" alt="">
+						<span class="layer-gradient"></span>
+						<span class="recomened-add-title">Hạ Long</span>
+					</a>
+				</div>
+			</div>
+			<div class="col-md-6 col-sm-4 col-4">
+				<div class="khoi-recommend-address">
+					<a href="">
+						<img src="./Assets/Images/ha-noi.jpg" width="100%" alt="">
+						<span class="layer-gradient"></span>
+						<span class="recomened-add-title">Hà Nội</span>
+					</a>
+				</div>
+			</div>
+		</div> <!-- het 1 dong recommended -->
+		<div class="row mot-dong-recomened-address">
+			<div class="col-md-6 col-sm-4 col-4">
+				<div class="khoi-recommend-address">
+					<a href="">
+						<img src="./Assets/Images/ha-noi.jpg" width="100%" alt="">
+						<span class="layer-gradient"></span>
+						<span class="recomened-add-title">Hà Nội</span>
+					</a>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-4 col-4">
+				<div class="khoi-recommend-address">
+					<a href="">
+						<img src="./Assets/Images/ha-long.jpg" width="100%" alt="">
+						<span class="layer-gradient"></span>
+						<span class="recomened-add-title">Hạ Long</span>
+					</a>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-4 col-4">
+				<div class="khoi-recommend-address">
+					<a href="">
+						<img src="./Assets/Images/sa-pa.jpg" width="100%" alt="">
+						<span class="layer-gradient"></span>
+						<span class="recomened-add-title">Hạ Long</span>
+					</a>
+				</div>
+			</div>
+		</div> <!-- het 1 dong recommended -->
+	</div>
+	<!-- Het hpan diem du lich noi tieng -->	
+
 	<!-- phần cẩm nang du lịch -->
 	<div id="cam-nang-du-lich">
 
@@ -268,10 +338,10 @@
 				</div>
 			</div>
 		</div>
+	</div>
+	<!-- hết phần cẩm nang du lịch -->
 
-	</div>  <!-- hết phần cẩm nang du lịch -->
-
-
+	<!-- Phan khach san theo tinh thanh -->
 	<div class="khachsantheotinhthanh">
 		<div class="container">
 			<h5 class="module-title">Khách sạn theo tỉnh thành</h5>
@@ -319,8 +389,10 @@
 
 			</div>
 		</div>
-	</div> <!-- het khach san theo tinh thanh -->
+	</div> 
+	<!-- het khach san theo tinh thanh -->
 
+	<!-- Phan dang ky thong tin -->
 	<div class="dangkythongtin">
 		<div class="container-fluid">
 			<div class="row">
@@ -336,8 +408,10 @@
 				</div>
 			</div>
 		</div>
-	</div> <!-- het dang ly thong tin -->
-
+	</div> 
+	<!-- het dang ky thong tin -->
+	
+	<!-- Phan footer -->
 	<footer>
 		<div class="container">
 			<div class="row">
