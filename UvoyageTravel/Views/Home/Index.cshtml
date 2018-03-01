@@ -1,31 +1,343 @@
-﻿@{
-    ViewBag.Title = "Home Page";
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<script type="text/javascript" src="~/Assets/User/js/sliderscript.js"></script>
+<!-- Phan banner -->
+<div id="banner">
+    <div class="bxslider">
+        <div class="mot-banner">
+            <img src="~/Assets/User/Images/banner-1.png" title="Funky roots">
+        </div>
+        <div class="mot-banner">
+            <img src="~/Assets/User/Images/banner-2.png" title="The long and winding road">
+        </div>
+        <!-- <div>
+            <img src="~/Assets/User/images/banner-1.png" title="Funky roots">
+        </div> -->
+    </div>
+    <!--Het slider-->
+    <div id="order">
+        <div class="row">
+            <div class="col-sm-4" id="search-address">
+                <p>Tìm điểm, đến khách sạn hoặc tên đường</p>
+                <input class="form-control" type="text" name="in-search-diadiem" value="" placeholder="Tìm điểm, đến khách sạn hoặc tên đường" id="in-search-diadiem">
+            </div>
+            <div class="col-sm-6" id="date-start">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <p>Ngày nhận phòng</p>
+                        <div class="row">
+                            <input type="text" readonly id="in-date-checkin">
+                            <span class="add-on" id="ic-date-checkin"><i class="fa fa-calendar-check-o" aria-hidden="true"></i></span>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <p>Ngày trả phòng</p>
+                        <div class="row">
+                            <input type="text" readonly id="in-date-checkout">
+                            <span class="add-on" id="ic-date-checkout"><i class="fa fa-calendar-check-o" aria-hidden="true"></i></span>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <p>Số phòng</p>
+                        <input type="text" name="in-search-diadiem" value="" placeholder="Tìm điểm, đến khách sạn hoặc tên đường" id="in-search-diadiem">
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
+                    </div>
+                </div>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+            </div>
+            <div class="col-sm-2" id="search-icon">
+                <a href="#" title=""><i class="fa fa-search" aria-hidden="true"></i> <strong>Tìm ngay</strong></a>
+            </div>
+        </div>
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+    <!-- het order -->
+</div>
+<!-- hết banner -->
+<!-- Phần why-us -->
+<div class="container why-us">
+    <div class="row">
+        <div class="col-md-3 mot-khoi-why-us text-center">
+            <i class="fa fa-star fa-2x" aria-hidden="true"></i>
+            <div class="why-us-title">
+                <strong>Cam kết giá tốt nhất</strong>
+            </div>
+            <div class="why-us-sub-title">
+                <p>Chúng tôi đảm bảo rằng bạn luôn nhận được phòng với mức giá ưu đãi nhất</p>
+            </div>
+        </div>
+        <div class="col-md-3 mot-khoi-why-us text-center">
+
+            <i class="fa fa-bed fa-2x" aria-hidden="true"></i>
+            <div class="why-us-title">
+                <strong>1.100.000+ khách sạn</strong>
+            </div>
+            <div class="why-us-sub-title">
+                <p>Chúng tôi đảm bảo rằng bạn luôn nhận được phòng với mức giá ưu đãi nhất</p>
+            </div>
+        </div>
+        <div class="col-md-3 mot-khoi-why-us text-center">
+            <i class="fa fa-credit-card fa-2x" aria-hidden="true"></i>
+            <div class="why-us-title">
+                <strong>Giá rẻ hơn</strong>
+            </div>
+            <div class="why-us-sub-title">
+                <p>So với đặt phòng trực tiếp tại khách sạn</p>
+            </div>
+        </div>
+        <div class="col-md-3 mot-khoi-why-us text-center">
+            <i class="fa fa-headphones fa-2x" aria-hidden="true"></i>
+            <div class="title1">
+                <strong>CHĂM SÓC 24/7</strong>
+            </div>
+            <div class="why-us-sub-title">
+                <p>Chúng tôi luôn sẵn sàng hỗ trợ bạn tốt nhất mọi vấn đề xảy ra</p>
+            </div>
+        </div>
     </div>
 </div>
+<!-- Hết phàn why-us -->
+<!-- Phan hotdeal-today -->
+<div class="hotdeal-today">
+    <div class="container">
+        <h5 class="module-title">Khuyến mại hôm nay</h5>
+        <div class="dealtoday owl-carousel owl-theme">
+            <div class="owl-item item">
+                <a href=""><img src="~/Assets/User/Images/today-deal-1.jpg" alt=""></a>
+                <div class="hotdeal-hotelname">Vipearl Cua Hoi Resort & Villas</div>
+                <div class="hotdeal-address"><i class="fa fa-map-marker" aria-hidden="true"></i> Cửa Lò</div>
+            </div>
+
+            <div class="owl-item item">
+                <a href=""><img src="~/Assets/User/Images/today-deal-1.jpg" alt="" width="100%"></a>
+                <div class="hotdeal-hotelname">Vipearl Cua Hoi Resort & Villas</div>
+                <div class="hotdeal-address"><i class="fa fa-map-marker" aria-hidden="true"></i> Cửa Lò</div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<script>
+    $('.owl-carousel').owlCarousel({
+        margin: 20,
+        loop: true,
+        autoWidth: true,
+        items: 5
+    })
+</script>
+<!-- Het phan hotdeal-today -->
+<!-- Phan diem du lich noi tieng -->
+<div class="container goiy-dia-diem">
+    <h5 class="module-title">Các điểm du lich nổi tiếng</h5>
+    <div class="row mot-dong-recomened-address">
+        <div class="col-md-6 col-sm-4 col-4">
+            <div class="khoi-recommend-address">
+                <a href="">
+                    <img src="~/Assets/User/Images/ha-noi.jpg" class="img-fluid" alt="">
+                    <span class="layer-gradient"></span>
+                    <span class="recomened-add-title">Hà Nội</span>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-4 col-4">
+            <div class="khoi-recommend-address">
+                <a href="">
+                    <img src="~/Assets/User/Images/ha-long.jpg" width="100%" alt="">
+                    <span class="layer-gradient"></span>
+                    <span class="recomened-add-title">Hạ Long</span>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-4 col-4">
+            <div class="khoi-recommend-address">
+                <a href="">
+                    <img src="~/Assets/User/Images/sa-pa.jpg" width="100%" alt="">
+                    <span class="layer-gradient"></span>
+                    <span class="recomened-add-title">Hạ Long</span>
+                </a>
+            </div>
+        </div>
+    </div> <!-- het 1 dong recommended -->
+    <div class="row mot-dong-recomened-address">
+        <div class="col-md-3 col-sm-4 col-4">
+            <div class="khoi-recommend-address">
+                <a href="">
+                    <img src="~/Assets/User/Images/ha-long.jpg" width="100%" alt="">
+                    <span class="layer-gradient"></span>
+                    <span class="recomened-add-title">Hạ Long</span>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-4 col-4">
+            <div class="khoi-recommend-address">
+                <a href="">
+                    <img src="~/Assets/User/Images/sa-pa.jpg" width="100%" alt="">
+                    <span class="layer-gradient"></span>
+                    <span class="recomened-add-title">Hạ Long</span>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-4 col-4">
+            <div class="khoi-recommend-address">
+                <a href="">
+                    <img src="~/Assets/User/Images/ha-noi.jpg" width="100%" alt="">
+                    <span class="layer-gradient"></span>
+                    <span class="recomened-add-title">Hà Nội</span>
+                </a>
+            </div>
+        </div>
+    </div> <!-- het 1 dong recommended -->
+    <div class="row mot-dong-recomened-address">
+        <div class="col-md-6 col-sm-4 col-4">
+            <div class="khoi-recommend-address">
+                <a href="">
+                    <img src="~/Assets/User/Images/ha-noi.jpg" width="100%" alt="">
+                    <span class="layer-gradient"></span>
+                    <span class="recomened-add-title">Hà Nội</span>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-4 col-4">
+            <div class="khoi-recommend-address">
+                <a href="">
+                    <img src="~/Assets/User/Images/ha-long.jpg" width="100%" alt="">
+                    <span class="layer-gradient"></span>
+                    <span class="recomened-add-title">Hạ Long</span>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-4 col-4">
+            <div class="khoi-recommend-address">
+                <a href="">
+                    <img src="~/Assets/User/Images/sa-pa.jpg" width="100%" alt="">
+                    <span class="layer-gradient"></span>
+                    <span class="recomened-add-title">Hạ Long</span>
+                </a>
+            </div>
+        </div>
+    </div> <!-- het 1 dong recommended -->
+</div>
+<!-- Het hpan diem du lich noi tieng -->
+<!-- phần cẩm nang du lịch -->
+<div id="cam-nang-du-lich">
+
+    <div class="container">
+        <h5 class="module-title">Cẩm nang du lịch</h5>
+        <div class="row">
+            <div class="col-4" id="cam-nang-1">
+                <a href="#" title="anh cam nang 1">
+                    <img src="~/Assets/User/Images/HNHT.jpg" alt="" class="anh-cam-nang">
+                </a>
+                <div class="title-cam-nang">
+                    <a href="#" title="">
+                        <p>Tổ chức hội nghị, hội thảo kết hợp nghỉ dưỡng lên ngôi</p>
+                    </a>
+                    <span class="ngay-cam-nang">16,Tháng 1,2018</span>
+                    <p class="thong-tin-cam-nang">
+                        <strong>Tổ chức hội nghị, hội thảo đã thay đổi như thế nào trong thời gian qua?</strong>
+                        <em>Những năm gần đây, xu hướng tổ...</em>
+                    </p>
+                </div>
+            </div>
+            <div class="col-4">
+                <a href="#" title="anh cam nang 1">
+                    <img src="~/Assets/User/Images/anh02.jpg" alt="" class="anh-cam-nang">
+                </a>
+                <div class="title-cam-nang">
+                    <a href="#" title="">
+                        <p>5 địa điểm du lịch không thể không đi dịp cuối tuần quanh Sài Gòn</p>
+                    </a>
+                    <span class="ngay-cam-nang">3,Tháng 6,2017</span>
+                    <p class="thong-tin-cam-nang">
+                        <em>Trong cái nắng nóng, xô bồ và đầy áp lực ở Sài Gòn, chúng ta vẫn có thể tìm cho mình những khoảng......</em>
+                    </p>
+                </div>
+            </div>
+            <div class="col-4">
+                <a href="#" title="anh cam nang 1">
+                    <img src="~/Assets/User/Images/anh03.jpg" alt="" class="anh-cam-nang">
+                </a>
+                <div class="title-cam-nang">
+                    <a href="#" title="">
+                        <p style="">Chia sẻ kinh nghiệm chọn Homestay ở Đà Lạt</p>
+                    </a>
+                    <span class="ngay-cam-nang">3,Tháng 6,2017</span>
+                    <p class="thong-tin-cam-nang">
+                        <em>Với những ai yêu thích homestay thì luôn bị thu hút bởi những homestay vừa xinh, vừa đẹp, vừa “...</em>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- hết phần cẩm nang du lịch -->
+<!-- Phan khach san theo tinh thanh -->
+<div class="khachsantheotinhthanh">
+    <div class="container">
+        <h5 class="module-title">Khách sạn theo tỉnh thành</h5>
+        <div class="row">
+            <div class="col-sm-3 motkhoikhachsan">
+                <ul class="list-unstyled">
+                    <li><a href="">Khách sạn Bà Rịa - Vũng Tàu</a></li>
+                    <li><a href="">Khách sạn Điện Biên</a></li>
+                    <li><a href="">Khách sạn Cần Thơ</a></li>
+                    <li><a href="">Khách sạn Bắc Ninh</a></li>
+                    <li><a href="">Khách sạn Cà Mau</a></li>
+                    <li><a href="">Khách sạn Bến Tre</a></li>
+                </ul>
+            </div> <!-- het 1 khoi khach san -->
+            <div class="col-sm-3 motkhoikhachsan">
+                <ul class="list-unstyled">
+                    <li><a href="">Khách sạn Bà Rịa - Vũng Tàu</a></li>
+                    <li><a href="">Khách sạn Điện Biên</a></li>
+                    <li><a href="">Khách sạn Cần Thơ</a></li>
+                    <li><a href="">Khách sạn Bắc Ninh</a></li>
+                    <li><a href="">Khách sạn Cà Mau</a></li>
+                    <li><a href="">Khách sạn Bến Tre</a></li>
+                </ul>
+            </div> <!-- het 1 khoi khach san -->
+            <div class="col-sm-3 motkhoikhachsan">
+                <ul class="list-unstyled">
+                    <li><a href="">Khách sạn Bà Rịa - Vũng Tàu</a></li>
+                    <li><a href="">Khách sạn Điện Biên</a></li>
+                    <li><a href="">Khách sạn Cần Thơ</a></li>
+                    <li><a href="">Khách sạn Bắc Ninh</a></li>
+                    <li><a href="">Khách sạn Cà Mau</a></li>
+                    <li><a href="">Khách sạn Bến Tre</a></li>
+                </ul>
+            </div> <!-- het 1 khoi khach san -->
+            <div class="col-sm-3 motkhoikhachsan">
+                <ul class="list-unstyled">
+                    <li><a href="">Khách sạn Bà Rịa - Vũng Tàu</a></li>
+                    <li><a href="">Khách sạn Điện Biên</a></li>
+                    <li><a href="">Khách sạn Cần Thơ</a></li>
+                    <li><a href="">Khách sạn Bắc Ninh</a></li>
+                    <li><a href="">Khách sạn Cà Mau</a></li>
+                    <li><a href="">Khách sạn Bến Tre</a></li>
+                </ul>
+            </div> <!-- het 1 khoi khach san -->
+
+        </div>
+    </div>
+</div>
+<!-- het khach san theo tinh thanh -->
+<!-- Phan dang ky thong tin -->
+<div class="dangkythongtin">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-7 khungthongtin text-white">
+                <h4 class="register-email">Nhận thông tin ưu đãi mới nhất từ chúng tôi</h4>
+                <p class="register-description">Đăng ký email để nhận thông báo về những chương trình ưu khuyến mãi hấp dẫn sớm nhất</p>
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Nhập địa chỉ email của bạn vào đây" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                        <button class="btn btn-warning text-white btnDangKy" type="button">Đăng ký</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- het dang ky thong tin -->
