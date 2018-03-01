@@ -1,0 +1,123 @@
+﻿@model UvoyageTravel.Models.Entity.KhachSan
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>KhachSan</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.QuanHuyen.TenQuanHuyen)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QuanHuyen.TenQuanHuyen)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TenKhachSan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenKhachSan)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UnsignedName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UnsignedName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DiaChi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DiaChi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.XepHang)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.XepHang)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SoDienThoai)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoDienThoai)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ThongTinLienHe)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ThongTinLienHe)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GiaTien)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GiaTien)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UuTien)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UuTien)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ThongTinMoTa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ThongTinMoTa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TienIch)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TienIch)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ChinhSach)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ChinhSach)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GoogleMap)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GoogleMap)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

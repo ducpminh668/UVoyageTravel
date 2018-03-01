@@ -162,11 +162,23 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\HotelController.cs" />
+    <Compile Include="Areas\Admin\Controllers\PostController.cs" />
+    <Compile Include="Areas\Admin\Controllers\UsersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201803010500267_init-database.cs" />
+    <Compile Include="Migrations\201803010500267_init-database.Designer.cs">
+      <DependentUpon>201803010500267_init-database.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803010622052_update-columnNgayDang-BaiViet.cs" />
+    <Compile Include="Migrations\201803010622052_update-columnNgayDang-BaiViet.Designer.cs">
+      <DependentUpon>201803010622052_update-columnNgayDang-BaiViet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Entity\Account.cs" />
     <Compile Include="Models\Entity\BaiViet.cs" />
     <Compile Include="Models\Entity\ChiTietDatPhong.cs" />
@@ -180,6 +192,7 @@
     <Compile Include="Models\Entity\User.cs" />
     <Compile Include="Models\Entity\UserInRole.cs" />
     <Compile Include="Models\Entity\UvoyageDBContext.cs" />
+    <Compile Include="Models\Function\EntityFunction\UserF.cs" />
     <Compile Include="Models\Function\StringConverter.cs" />
     <Compile Include="Models\Identity\CustomAuthorizeAttribute.cs" />
     <Compile Include="Models\Identity\CustomIdentity.cs" />
@@ -7684,6 +7697,21 @@
     <Content Include="Assets\User\libs\OwlCarousel2-2.2.1\src\scss\_theme.scss" />
     <Content Include="Assets\User\libs\OwlCarousel2-2.2.1\src\scss\_video.scss" />
     <Content Include="Assets\User\libs\OwlCarousel2-2.2.1\_config.json" />
+    <Content Include="Areas\Admin\Views\Post\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Post\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Post\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\Post\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Post\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Users\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Users\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Users\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\Users\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Users\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Hotel\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Hotel\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Hotel\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\Hotel\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Hotel\Index.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -7712,7 +7740,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Models\" />
-    <Folder Include="Models\Function\EntityFunction\" />
     <Folder Include="Views\Login\" />
   </ItemGroup>
   <ItemGroup>
@@ -7728,6 +7755,14 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201803010500267_init-database.resx">
+      <DependentUpon>201803010500267_init-database.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803010622052_update-columnNgayDang-BaiViet.resx">
+      <DependentUpon>201803010622052_update-columnNgayDang-BaiViet.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
