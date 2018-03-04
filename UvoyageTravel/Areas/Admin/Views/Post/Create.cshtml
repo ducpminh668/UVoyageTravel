@@ -7,10 +7,10 @@
 
 <h2>Create</h2>
 
-@using (Html.BeginForm()) 
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4>BaiViet</h4>
         <hr />
@@ -24,17 +24,9 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.TenBaiVietUnsigned, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.TenBaiVietUnsigned, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.TenBaiVietUnsigned, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
             @Html.LabelFor(model => model.NoiDung, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.TextAreaFor(model => model.NoiDung, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.TextAreaFor(model => model.NoiDung, new { @class = "form-control", @rows = 5 })
                 @Html.ValidationMessageFor(model => model.NoiDung, "", new { @class = "text-danger" })
             </div>
         </div>

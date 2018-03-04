@@ -1,12 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Data;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
-using System.Web;
 using System.Web.Mvc;
 using UvoyageTravel.Models.Entity;
+using UvoyageTravel.Models.Function;
 
 namespace UvoyageTravel.Areas.Admin.Controllers
 {
@@ -42,13 +40,14 @@ namespace UvoyageTravel.Areas.Admin.Controllers
         }
 
         // POST: Admin/Post/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Exclude = "NgayDang")] BaiViet baiViet)
         {
             baiViet.NgayDang = DateTime.Now;
+            baiViet.TenBaiVietUnsigned = StringConverter.toUnsignedString(baiViet.TenBaiViet);
             if (ModelState.IsValid)
             {
                 db.BaiViets.Add(baiViet);
@@ -75,7 +74,7 @@ namespace UvoyageTravel.Areas.Admin.Controllers
         }
 
         // POST: Admin/Post/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
