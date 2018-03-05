@@ -1,10 +1,8 @@
 namespace UvoyageTravel.Models.Entity
 {
-    using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
 
     [Table("ThanhPho")]
     public partial class ThanhPho
@@ -20,6 +18,13 @@ namespace UvoyageTravel.Models.Entity
 
         [StringLength(250)]
         public string TenThanhPho { get; set; }
+
+        [StringLength(500)]
+        public string Img { get; set; }
+
+        public int? Ordering { get; set; }
+
+        public bool? HotStatus { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<QuanHuyen> QuanHuyens { get; set; }

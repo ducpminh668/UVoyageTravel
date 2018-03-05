@@ -6,20 +6,14 @@ namespace UvoyageTravel.Models.Entity
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("BaiViet")]
-    public partial class BaiViet
+    public partial class Slide
     {
         public int ID { get; set; }
 
-        [Required]
         [StringLength(500)]
-        public string TenBaiViet { get; set; }
+        public string Img { get; set; }
 
-        [StringLength(500)]
-        public string TenBaiVietUnsigned { get; set; }
-
-        public DateTime? NgayDang { get; set; }
-
-        public string NoiDung { get; set; }
+        [StringLength(250)]
+        public string Description { get; set; }
     }
 }

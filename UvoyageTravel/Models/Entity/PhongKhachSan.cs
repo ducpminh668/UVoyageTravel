@@ -26,6 +26,8 @@ namespace UvoyageTravel.Models.Entity
 
         public bool? DichVuHuyPhong { get; set; }
 
+        public decimal? GiaTien { get; set; }
+
         public bool? GomBuaAn { get; set; }
 
         [StringLength(500)]

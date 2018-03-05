@@ -176,29 +176,31 @@
     <Compile Include="Areas\Admin\Controllers\HotelController.cs" />
     <Compile Include="Areas\Admin\Controllers\PostController.cs" />
     <Compile Include="Areas\Admin\Controllers\UsersController.cs" />
+    <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201803010500267_init-database.cs" />
-    <Compile Include="Migrations\201803010500267_init-database.Designer.cs">
-      <DependentUpon>201803010500267_init-database.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201803010622052_update-columnNgayDang-BaiViet.cs" />
-    <Compile Include="Migrations\201803010622052_update-columnNgayDang-BaiViet.Designer.cs">
-      <DependentUpon>201803010622052_update-columnNgayDang-BaiViet.cs</DependentUpon>
+    <Compile Include="Migrations\201803050411147_add-table-slide-menu-footer.cs" />
+    <Compile Include="Migrations\201803050411147_add-table-slide-menu-footer.Designer.cs">
+      <DependentUpon>201803050411147_add-table-slide-menu-footer.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Entity\Account.cs" />
     <Compile Include="Models\Entity\BaiViet.cs" />
+    <Compile Include="Models\Entity\Cart.cs" />
+    <Compile Include="Models\Entity\CartItem.cs" />
     <Compile Include="Models\Entity\ChiTietDatPhong.cs" />
+    <Compile Include="Models\Entity\C__MigrationHistory.cs" />
     <Compile Include="Models\Entity\DatPhong.cs" />
+    <Compile Include="Models\Entity\Footer.cs" />
     <Compile Include="Models\Entity\KhachSan.cs" />
+    <Compile Include="Models\Entity\Menu.cs" />
     <Compile Include="Models\Entity\PhongKhachSan.cs" />
     <Compile Include="Models\Entity\QuanHuyen.cs" />
     <Compile Include="Models\Entity\Role.cs" />
-    <Compile Include="Models\Entity\sysdiagram.cs" />
+    <Compile Include="Models\Entity\Slide.cs" />
     <Compile Include="Models\Entity\ThanhPho.cs" />
     <Compile Include="Models\Entity\User.cs" />
     <Compile Include="Models\Entity\UserInRole.cs" />
@@ -7776,15 +7778,12 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201803010500267_init-database.resx">
-      <DependentUpon>201803010500267_init-database.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201803010622052_update-columnNgayDang-BaiViet.resx">
-      <DependentUpon>201803010622052_update-columnNgayDang-BaiViet.cs</DependentUpon>
-    </EmbeddedResource>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadata Include="Service References\" />
+    <EmbeddedResource Include="Migrations\201803050411147_add-table-slide-menu-footer.resx">
+      <DependentUpon>201803050411147_add-table-slide-menu-footer.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

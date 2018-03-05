@@ -12,14 +12,17 @@ namespace UvoyageTravel.Models.Entity
         {
         }
 
+        public virtual DbSet<C__MigrationHistory> C__MigrationHistory { get; set; }
         public virtual DbSet<BaiViet> BaiViets { get; set; }
         public virtual DbSet<ChiTietDatPhong> ChiTietDatPhongs { get; set; }
         public virtual DbSet<DatPhong> DatPhongs { get; set; }
+        public virtual DbSet<Footer> Footers { get; set; }
         public virtual DbSet<KhachSan> KhachSans { get; set; }
+        public virtual DbSet<Menu> Menus { get; set; }
         public virtual DbSet<PhongKhachSan> PhongKhachSans { get; set; }
         public virtual DbSet<QuanHuyen> QuanHuyens { get; set; }
         public virtual DbSet<Role> Roles { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
+        public virtual DbSet<Slide> Slides { get; set; }
         public virtual DbSet<ThanhPho> ThanhPhoes { get; set; }
         public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<UserInRole> UserInRoles { get; set; }
@@ -67,6 +70,10 @@ namespace UvoyageTravel.Models.Entity
                 .Property(e => e.GoogleMap)
                 .IsUnicode(false);
 
+            modelBuilder.Entity<Menu>()
+                .Property(e => e.target)
+                .IsUnicode(false);
+
             modelBuilder.Entity<PhongKhachSan>()
                 .HasMany(e => e.ChiTietDatPhongs)
                 .WithRequired(e => e.PhongKhachSan)
@@ -84,6 +91,10 @@ namespace UvoyageTravel.Models.Entity
                 .HasMany(e => e.KhachSans)
                 .WithOptional(e => e.QuanHuyen)
                 .HasForeignKey(e => e.QuanHuyen_ID);
+
+            modelBuilder.Entity<Slide>()
+                .Property(e => e.Img)
+                .IsUnicode(false);
 
             modelBuilder.Entity<ThanhPho>()
                 .Property(e => e.ID)

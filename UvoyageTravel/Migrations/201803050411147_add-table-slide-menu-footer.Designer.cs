@@ -7,13 +7,13 @@ namespace UvoyageTravel.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class updatecolumnNgayDangBaiViet : IMigrationMetadata
+    public sealed partial class addtableslidemenufooter : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(updatecolumnNgayDangBaiViet));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(addtableslidemenufooter));
         
         string IMigrationMetadata.Id
         {
-            get { return "201803010622052_update-columnNgayDang-BaiViet"; }
+            get { return "201803050411147_add-table-slide-menu-footer"; }
         }
         
         string IMigrationMetadata.Source

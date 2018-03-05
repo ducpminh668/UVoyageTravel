@@ -3,7 +3,7 @@ namespace UvoyageTravel.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class initdatabase : DbMigration
+    public partial class addtableslidemenufooter : DbMigration
     {
         public override void Up()
         {
@@ -14,10 +14,21 @@ namespace UvoyageTravel.Migrations
                         ID = c.Int(nullable: false, identity: true),
                         TenBaiViet = c.String(nullable: false, maxLength: 500),
                         TenBaiVietUnsigned = c.String(maxLength: 500, unicode: false),
-                        NgayDang = c.DateTime(storeType: "date"),
+                        NgayDang = c.DateTime(),
                         NoiDung = c.String(),
                     })
                 .PrimaryKey(t => t.ID);
+            
+            CreateTable(
+                "dbo.__MigrationHistory",
+                c => new
+                    {
+                        MigrationId = c.String(nullable: false, maxLength: 150),
+                        ContextKey = c.String(nullable: false, maxLength: 300),
+                        Model = c.Binary(nullable: false),
+                        ProductVersion = c.String(nullable: false, maxLength: 32),
+                    })
+                .PrimaryKey(t => new { t.MigrationId, t.ContextKey });
             
             CreateTable(
                 "dbo.ChiTietDatPhong",
@@ -58,9 +69,19 @@ namespace UvoyageTravel.Migrations
                         DienTich = c.Double(),
                         ToiDa = c.Byte(),
                         DichVuHuyPhong = c.Boolean(),
+                        GiaTien = c.Decimal(precision: 18, scale: 2),
                         GomBuaAn = c.Boolean(),
                         MoTa = c.String(maxLength: 500),
                         KhachSan_ID = c.Int(),
+                    })
+                .PrimaryKey(t => t.ID);
+            
+            CreateTable(
+                "dbo.Footer",
+                c => new
+                    {
+                        ID = c.Int(nullable: false, identity: true),
+                        Content = c.String(),
                     })
                 .PrimaryKey(t => t.ID);
             
@@ -105,6 +126,19 @@ namespace UvoyageTravel.Migrations
                     {
                         ID = c.String(nullable: false, maxLength: 100, unicode: false),
                         TenThanhPho = c.String(maxLength: 250),
+                        Img = c.String(maxLength: 500),
+                        Ordering = c.Int(),
+                        HotStatus = c.Boolean(),
+                    })
+                .PrimaryKey(t => t.ID);
+            
+            CreateTable(
+                "dbo.Menu",
+                c => new
+                    {
+                        ID = c.Int(nullable: false, identity: true),
+                        Content = c.String(maxLength: 250),
+                        target = c.String(maxLength: 50, unicode: false),
                     })
                 .PrimaryKey(t => t.ID);
             
@@ -118,16 +152,14 @@ namespace UvoyageTravel.Migrations
                 .PrimaryKey(t => t.ID);
             
             CreateTable(
-                "dbo.sysdiagrams",
+                "dbo.Slides",
                 c => new
                     {
-                        diagram_id = c.Int(nullable: false, identity: true),
-                        name = c.String(nullable: false, maxLength: 128),
-                        principal_id = c.Int(nullable: false),
-                        version = c.Int(),
-                        definition = c.Binary(),
+                        ID = c.Int(nullable: false, identity: true),
+                        Img = c.String(maxLength: 500, unicode: false),
+                        Description = c.String(maxLength: 250),
                     })
-                .PrimaryKey(t => t.diagram_id);
+                .PrimaryKey(t => t.ID);
             
             CreateTable(
                 "dbo.UserInRole",
@@ -162,14 +194,17 @@ namespace UvoyageTravel.Migrations
             DropIndex("dbo.ChiTietDatPhong", new[] { "PhieuDat_ID" });
             DropTable("dbo.User");
             DropTable("dbo.UserInRole");
-            DropTable("dbo.sysdiagrams");
+            DropTable("dbo.Slides");
             DropTable("dbo.Roles");
+            DropTable("dbo.Menu");
             DropTable("dbo.ThanhPho");
             DropTable("dbo.QuanHuyen");
             DropTable("dbo.KhachSan");
+            DropTable("dbo.Footer");
             DropTable("dbo.PhongKhachSan");
             DropTable("dbo.DatPhong");
             DropTable("dbo.ChiTietDatPhong");
+            DropTable("dbo.__MigrationHistory");
             DropTable("dbo.BaiViet");
         }
     }
