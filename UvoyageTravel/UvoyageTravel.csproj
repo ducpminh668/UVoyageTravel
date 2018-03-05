@@ -172,9 +172,11 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\CityController.cs" />
+    <Compile Include="Areas\Admin\Controllers\FootersController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Areas\Admin\Controllers\HotelController.cs" />
     <Compile Include="Areas\Admin\Controllers\PostController.cs" />
+    <Compile Include="Areas\Admin\Controllers\SlidesController.cs" />
     <Compile Include="Areas\Admin\Controllers\UsersController.cs" />
     <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -182,9 +184,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201803050411147_add-table-slide-menu-footer.cs" />
-    <Compile Include="Migrations\201803050411147_add-table-slide-menu-footer.Designer.cs">
-      <DependentUpon>201803050411147_add-table-slide-menu-footer.cs</DependentUpon>
+    <Compile Include="Migrations\201803050446066_init-database.cs" />
+    <Compile Include="Migrations\201803050446066_init-database.Designer.cs">
+      <DependentUpon>201803050446066_init-database.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Entity\Account.cs" />
@@ -192,7 +194,6 @@
     <Compile Include="Models\Entity\Cart.cs" />
     <Compile Include="Models\Entity\CartItem.cs" />
     <Compile Include="Models\Entity\ChiTietDatPhong.cs" />
-    <Compile Include="Models\Entity\C__MigrationHistory.cs" />
     <Compile Include="Models\Entity\DatPhong.cs" />
     <Compile Include="Models\Entity\Footer.cs" />
     <Compile Include="Models\Entity\KhachSan.cs" />
@@ -7732,6 +7733,16 @@
     <Content Include="Areas\Admin\Views\City\Details.cshtml" />
     <Content Include="Areas\Admin\Views\City\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\City\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Slides\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Slides\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Slides\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\Slides\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Slides\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Footers\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Footers\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Footers\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\Footers\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Footers\Index.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -7744,7 +7755,9 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -7781,8 +7794,8 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201803050411147_add-table-slide-menu-footer.resx">
-      <DependentUpon>201803050411147_add-table-slide-menu-footer.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201803050446066_init-database.resx">
+      <DependentUpon>201803050446066_init-database.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

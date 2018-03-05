@@ -1,4 +1,4 @@
-﻿
+﻿@using UvoyageTravel.Models.Entity;
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -7,15 +7,13 @@
 <!-- Phan banner -->
 <div id="banner">
     <div class="bxslider">
-        <div class="mot-banner">
-            <img src="~/Assets/User/Images/banner-1.png" title="Funky roots">
-        </div>
-        <div class="mot-banner">
-            <img src="~/Assets/User/Images/banner-2.png" title="The long and winding road">
-        </div>
-        <!-- <div>
-            <img src="~/Assets/User/images/banner-1.png" title="Funky roots">
-        </div> -->
+       
+        @foreach (Slide item in ViewBag.Slides)
+        {
+            <div class="mot-banner">
+                <img src="~/Assets/User/Images/@item.Img" alt="@item.Description" title="Funky roots">
+            </div>
+        }
     </div>
     <!--Het slider-->
     <div id="order">

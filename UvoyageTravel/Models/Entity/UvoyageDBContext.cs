@@ -12,7 +12,6 @@ namespace UvoyageTravel.Models.Entity
         {
         }
 
-        public virtual DbSet<C__MigrationHistory> C__MigrationHistory { get; set; }
         public virtual DbSet<BaiViet> BaiViets { get; set; }
         public virtual DbSet<ChiTietDatPhong> ChiTietDatPhongs { get; set; }
         public virtual DbSet<DatPhong> DatPhongs { get; set; }
