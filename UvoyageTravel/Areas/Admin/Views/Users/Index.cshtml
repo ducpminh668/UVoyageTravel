@@ -1,5 +1,5 @@
 ﻿@using UvoyageTravel.Models.Entity;
-@model List<UvoyageTravel.Models.Entity.Account>
+@model List<Account>
 
 @{
     ViewBag.Title = "Index";
@@ -7,13 +7,13 @@
 
 }
 
-
 <ul>
     @foreach (Account acc in Model)
     {
-        <li>@acc.username
+        <li>
+            @acc.username - Pass : @acc.password
             <ul>
-                @foreach(string role in acc.Roles)
+                @foreach (string role in acc.Roles)
                 {
                     <li>@role</li>
                 }
@@ -21,4 +21,3 @@
         </li>
     }
 </ul>
-
