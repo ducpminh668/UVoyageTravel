@@ -7,13 +7,16 @@
 <!-- Phan banner -->
 <div id="banner">
     <div class="bxslider">
-       
-        @foreach (Slide item in ViewBag.Slides)
+        @if (ViewBag.Slides != null)
         {
-            <div class="mot-banner">
-                <img src="~/Assets/User/Images/@item.Img" alt="@item.Description" title="Funky roots">
-            </div>
+            foreach (Slide item in ViewBag.Slides)
+            {
+                <div class="mot-banner">
+                    <img src="~/Assets/User/Images/@item.Img" alt="@item.Description" title="Funky roots">
+                </div>
+            }
         }
+
     </div>
     <!--Het slider-->
     <div id="order">
