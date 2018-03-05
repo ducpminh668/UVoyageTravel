@@ -46,6 +46,7 @@ namespace UvoyageTravel.Areas.Admin.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [ValidateInput(false)]
         public ActionResult Create([Bind(Include = "ID,Content")] Footer footer)
         {
             if (ModelState.IsValid)
