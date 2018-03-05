@@ -78,8 +78,10 @@ namespace UvoyageTravel.Areas.Admin.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,TenBaiViet,TenBaiVietUnsigned,NoiDung")] BaiViet baiViet)
+        public ActionResult Edit([Bind(Include = "ID,TenBaiViet,TenBaiVietUnsigned,NgayDang,NoiDung")] BaiViet baiViet)
         {
+            baiViet.NgayDang = DateTime.Now;
+            baiViet.TenBaiVietUnsigned = StringConverter.toUnsignedString(baiViet.TenBaiViet);
             if (ModelState.IsValid)
             {
                 db.Entry(baiViet).State = EntityState.Modified;

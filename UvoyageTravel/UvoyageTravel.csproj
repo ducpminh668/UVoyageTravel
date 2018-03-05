@@ -184,9 +184,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201803050602093_init-database.cs" />
-    <Compile Include="Migrations\201803050602093_init-database.Designer.cs">
-      <DependentUpon>201803050602093_init-database.cs</DependentUpon>
+    <Compile Include="Migrations\201803050811066_InitialCreate.cs" />
+    <Compile Include="Migrations\201803050811066_InitialCreate.Designer.cs">
+      <DependentUpon>201803050811066_InitialCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Entity\Account.cs" />
@@ -7794,8 +7794,8 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201803050602093_init-database.resx">
-      <DependentUpon>201803050602093_init-database.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201803050811066_InitialCreate.resx">
+      <DependentUpon>201803050811066_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
