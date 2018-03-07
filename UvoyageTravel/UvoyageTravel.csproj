@@ -181,6 +181,7 @@
     <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\OrderController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -7776,6 +7777,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Cart\ThanhToan.cshtml" />
     <Content Include="Views\Login\Login.cshtml" />
+    <Content Include="Views\Order\DatPhong.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
