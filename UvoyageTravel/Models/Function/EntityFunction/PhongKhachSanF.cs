@@ -14,5 +14,14 @@ namespace UvoyageTravel.Models.Function.EntityFunction
         {
             return db.PhongKhachSans.Find(id);
         }
+
+        public IEnumerable<PhongKhachSan> ListRoomsByHotelId(KhachSan ks)
+        {
+            if(ks == null)
+            {
+                return null;
+            }
+            return db.PhongKhachSans.Where(x=>x.KhachSan_ID == ks.ID);
+        }
     }
 }
