@@ -207,6 +207,7 @@
     <Compile Include="Models\Entity\User.cs" />
     <Compile Include="Models\Entity\UserInRole.cs" />
     <Compile Include="Models\Entity\UvoyageDBContext.cs" />
+    <Compile Include="Models\Function\EntityFunction\KhachSanF.cs" />
     <Compile Include="Models\Function\EntityFunction\PhongKhachSanF.cs" />
     <Compile Include="Models\Function\EntityFunction\UserF.cs" />
     <Compile Include="Models\Function\FileExt.cs" />
@@ -7778,6 +7779,7 @@
     <Content Include="Views\Cart\ThanhToan.cshtml" />
     <Content Include="Views\Login\Login.cshtml" />
     <Content Include="Views\Order\DatPhong.cshtml" />
+    <Content Include="Views\Home\DanhSachKhachSan.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
