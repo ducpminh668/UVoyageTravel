@@ -15,8 +15,8 @@ namespace UvoyageTravel.Areas.Admin.Controllers
         public ActionResult Index()
         {
             UserF _UserFunc = new UserF();
-            var allUserAndRoles = _UserFunc.getAllUserAndRoles();
-            return View();
+            List<Account> allUserAndRoles = _UserFunc.getAllUserAndRoles();
+            return View(allUserAndRoles);
         }
 
         // GET: Admin/Users/Details/5

@@ -80,7 +80,8 @@
     <!-- hết navbar -->
     @RenderBody();
     <!-- Phan footer -->
-    @Html.Raw(footer.Content)
+    @{ string content = footer != null ? footer.Content : "";}
+    @Html.Raw(content)
     <!-- het footer -->
 </body>
 
