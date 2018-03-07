@@ -3,7 +3,6 @@ namespace UvoyageTravel.Migrations
     using System;
     using System.Data.Entity.Migrations;
     using System.IO;
-    using System.Web;
 
     internal sealed class Configuration : DbMigrationsConfiguration<UvoyageTravel.Models.Entity.UvoyageDBContext>
     {
@@ -31,11 +30,15 @@ namespace UvoyageTravel.Migrations
             string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..", @"Views/Shared/Footer.html");
             //string filePath = System.Web.HttpContext.Current.Server.MapPath("~/Content/Footer.html");
             context.Footers.AddOrUpdate(
-                  p => p.Content,
+                  p => p.ID,
                   new Models.Entity.Footer { Content = File.ReadAllText(filePath) }
                 );
 
-
+            context.Slides.AddOrUpdate(
+                p => p.ID,
+                new Models.Entity.Slide {Img = "banner-1.png", Description = "Uvoyage-banner-1" },
+                new Models.Entity.Slide { Img = "banner-2.png", Description = "Uvoyage-banner-2" }
+                );
         }
     }
 }

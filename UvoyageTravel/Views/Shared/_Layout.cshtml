@@ -1,5 +1,5 @@
 ﻿@using UvoyageTravel.Models.Entity
-@{ 
+@{
     UvoyageDBContext db = new UvoyageDBContext();
     Footer footer = db.Footers.FirstOrDefault();
 }
@@ -69,8 +69,11 @@
                 <li class="btn-group" id="NgonNgu" style="margin:auto">
                     <a href="#">
                         <ul id="ngonNgu">
-                            <img src="~/Assets/User/Images/vi.gif" alt="Tiếng Việt" title="Tiếng Việt" width="18px" height="18px" />
-                            <span class="fa fa-angle-down hidden-xs"></span>
+                            <li>
+                                <img src="~/Assets/User/Images/vi.gif" alt="Tiếng Việt" title="Tiếng Việt" />
+                                <span class="fa fa-angle-down hidden-xs"></span>
+                            </li>
+                        </ul>
                     </a>
                 </li>
             </ul>
@@ -84,5 +87,4 @@
     @Html.Raw(content)
     <!-- het footer -->
 </body>
-
 </html>
