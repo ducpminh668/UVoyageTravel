@@ -6752,10 +6752,12 @@
     <Content Include="Assets\User\Images\iconsupporter.jpg" />
     <Content Include="Assets\User\Images\logo-12trip.png" />
     <Content Include="Assets\User\Images\logo.png" />
+    <Content Include="Assets\User\Images\logo_sale.png" />
     <Content Include="Assets\User\Images\qrcode.png" />
     <Content Include="Assets\User\Images\rating.png" />
     <Content Include="Assets\User\Images\sa-pa.jpg" />
     <Content Include="Assets\User\Images\today-deal-1.jpg" />
+    <Content Include="Assets\User\Images\vi.gif" />
     <Content Include="Assets\User\js\jquery-3.2.1.min.js" />
     <Content Include="Assets\User\js\jquery-ui.js" />
     <Content Include="Assets\User\js\mainscrip.js" />
