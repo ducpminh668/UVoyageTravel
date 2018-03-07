@@ -34,7 +34,11 @@ namespace UvoyageTravel.Migrations
                   p => p.Content,
                   new Models.Entity.Footer { Content = File.ReadAllText(filePath) }
                 );
-
+            context.Slides.AddOrUpdate(
+                p => p.ID,
+                new Models.Entity.Slide { Img = "banner-1.png", Description = "Uvoyage-banner-1" },
+                new Models.Entity.Slide { Img = "banner-2.png", Description = "Uvoyage-banner-2" }
+                );
 
         }
     }

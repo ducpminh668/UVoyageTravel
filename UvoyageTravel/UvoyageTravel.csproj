@@ -184,9 +184,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201803070459341_init-database.cs" />
-    <Compile Include="Migrations\201803070459341_init-database.Designer.cs">
-      <DependentUpon>201803070459341_init-database.cs</DependentUpon>
+    <Compile Include="Migrations\201803070613175_cuong-init-database.cs" />
+    <Compile Include="Migrations\201803070613175_cuong-init-database.Designer.cs">
+      <DependentUpon>201803070613175_cuong-init-database.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Entity\Account.cs" />
@@ -6752,6 +6752,7 @@
     <Content Include="Assets\User\Images\iconsupporter.jpg" />
     <Content Include="Assets\User\Images\logo-12trip.png" />
     <Content Include="Assets\User\Images\logo.png" />
+    <Content Include="Assets\User\Images\logo2.png" />
     <Content Include="Assets\User\Images\logo_sale.png" />
     <Content Include="Assets\User\Images\qrcode.png" />
     <Content Include="Assets\User\Images\rating.png" />
@@ -7800,8 +7801,8 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201803070459341_init-database.resx">
-      <DependentUpon>201803070459341_init-database.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201803070613175_cuong-init-database.resx">
+      <DependentUpon>201803070613175_cuong-init-database.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
