@@ -15,6 +15,8 @@
 <div class="container login-box">
     <div class="row">
         <div class="col-md-4 offset-md-1">
+            @using (Html.BeginForm())
+            {
             <div class="form-box">
                 <form action="" method="get" accept-charset="utf-8">
                     <h4>Đăng nhập</h4>
@@ -41,10 +43,10 @@
                     </div>
                     <div class="form-bottom">
                         <div class="form-group">
-                            <input type="text" class="required form-control" name="username" placeholder="Email">
+                            <input type="text" class="required form-control" name="Username" placeholder="Email">
                         </div>
                         <div class="form-group">
-                            <input type="password" class="required form-control" name="password" value="" placeholder="Mật khẩu" autocomplete="off">
+                            <input type="password" class="required form-control" name="Password" value="" placeholder="Mật khẩu" autocomplete="off">
                         </div>
                     </div>
                     <div class="row">
@@ -60,8 +62,12 @@
                     </div>
                 </form>
             </div>
+            }
+
         </div>
         <div class="col-md-4 offset-md-2">
+            @using (Html.BeginForm("Register", "Login"))
+            {
             <div class="form-box">
                 <form action="" method="get" accept-charset="utf-8">
                     <h4>Đăng kí</h4>
@@ -70,16 +76,16 @@
                     </div>
                     <div class="form-resister form-bottom">
                         <div class="form-group">
-                            <input type="text" class="required form-control" name="username" placeholder="Họ và tên đệm">
+                            <input type="text" class="required form-control" name="HoTen" placeholder="Họ và tên đệm">
                         </div>
                         <div class="form-group">
-                            <input type="text" class="required form-control" name="username" placeholder="Tên">
+                            <input type="text" class="required form-control" name="" placeholder="Tên">
                         </div>
                         <div class="form-group">
-                            <input type="text" class="required form-control" name="username" placeholder="Email">
+                            <input type="text" class="required form-control" name="Username" placeholder="Email">
                         </div>
                         <div class="form-group">
-                            <input type="password" class="required form-control" name="password" value="" placeholder="Mật khẩu" autocomplete="off">
+                            <input type="password" class="required form-control" name="Password" value="" placeholder="Mật khẩu" autocomplete="off">
                         </div>
                     </div>
                     <div style="text-align: center;">
@@ -88,6 +94,7 @@
                     <p class="term">Qua việc đăng ký tài khoản trên website, bạn đồng ý hoàn toàn với các <a href="">Điều khoản, điều kiện </a> cũng như các <a href="">Chính sách bảo mật </a> của chúng tôi.</p>
                 </form>
             </div>
+            }
         </div>
     </div>
 </div> <!-- het login-box -->

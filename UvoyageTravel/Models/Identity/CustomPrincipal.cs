@@ -26,7 +26,7 @@ namespace UvoyageTravel.Models.Identity
 
             var roles = role.Split(new char[] { ',' });
             UvoyageDBContext db = new UvoyageDBContext();
-            string username = (HttpContext.Current.Session["DangNhap"] as User).Username;
+            string username = (HttpContext.Current.Session["DangNhap"] as Account).username;
             bool kq = (from UserInRole in db.UserInRoles
                        join Role in db.Roles
                        on UserInRole.ID_Role equals Role.ID

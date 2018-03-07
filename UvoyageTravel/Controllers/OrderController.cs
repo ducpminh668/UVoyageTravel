@@ -13,12 +13,25 @@ namespace UvoyageTravel.Controllers
         // GET: Order
         public ActionResult DatPhong(int id = 1)
         {
-            KhachSan ks = new KhachSanF().FindEnity(id);
+            var ks = new KhachSanF().FindEnity(id);
             if(ks != null)
             {
-                ViewBag.ListPhong = new PhongKhachSanF().ListRoomsByHotelId(ks);
+                ViewBag.ListPhong = new PhongKhachSanF().ListRoomsByHotelId(ks).ToList();
             }
-            return View(ks);
+            return View(ks); 
+        }
+
+        [HttpPost]
+        public JsonResult DatPhong(List<CartAjax> listCart)
+        {
+            Cart Cart = new Cart();
+            foreach(CartAjax item in listCart)
+            {
+                PhongKhachSan phong = new PhongKhachSanF().FindEnity(item.id);
+                Cart.AddItem(phong, item.quantity);
+            }
+            Session["CartSession"] = Cart;
+            return Json(new { status = 200, data = "oke"}, JsonRequestBehavior.AllowGet);
         }
     }
 }

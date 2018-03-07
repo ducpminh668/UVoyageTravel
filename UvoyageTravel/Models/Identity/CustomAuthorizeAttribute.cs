@@ -13,7 +13,7 @@ namespace UvoyageTravel.Models.Identity
         {
             if (HttpContext.Current == null)
             {
-                filterContext.Result = new RedirectResult("/Login/index");
+                filterContext.Result = new RedirectResult("/Login/Login");
                 //filterContext.Result = new RedirectToRouteResult(
                 //         new System.Web.Routing.RouteValueDictionary(
                 //          new
@@ -27,7 +27,7 @@ namespace UvoyageTravel.Models.Identity
             var acc = (Account)HttpContext.Current.Session["DangNhap"];
             if (acc == null)
             {
-                filterContext.Result = new RedirectResult("/Login/index");
+                filterContext.Result = new RedirectResult("/Login/Login");
                 ////  filterContext.Result = new RedirectToRouteResult(new System.Web.Routing.RouteValueDictionary(new { Controller = "Account", Action = "Index" }));
                 //filterContext.Result = new RedirectToRouteResult(
                 //    new System.Web.Routing.RouteValueDictionary(
@@ -43,7 +43,7 @@ namespace UvoyageTravel.Models.Identity
                 CustomPrincipal cp = new CustomPrincipal(acc);
                 if (!cp.IsInRole(Roles))
                 {
-                    filterContext.Result = new RedirectResult("/Login/index");
+                    filterContext.Result = new RedirectResult("/Login/Login");
                     //filterContext.Result = new RedirectToRouteResult(
                     //    new System.Web.Routing.RouteValueDictionary(
                     //        new { Controller = "Login", Action = "Index" }));

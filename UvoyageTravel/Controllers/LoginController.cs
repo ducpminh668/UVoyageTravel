@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using UvoyageTravel.Models.Entity;
+using UvoyageTravel.Models.Function.EntityFunction;
 
 namespace UvoyageTravel.Controllers
 {
@@ -18,10 +15,20 @@ namespace UvoyageTravel.Controllers
         [HttpPost]
         public ActionResult Login(User User)
         {
-            
-            //Change Return Redirec
-            return View();
+            Account Account = new UserF().Login(User.Username, User.Password);
+            if(Account == null)
+            {
+                return View();
+            }
+            Session["DangNhap"] = Account;
+            if (Account.Roles.Contains("Admin"))
+            {
+                return RedirectToAction("Index", "Home", new { area = "Admin" });
+            }
+            else
+            {
+                return RedirectToAction("Index", "Home");
+            }
         }
-        
     }
 }

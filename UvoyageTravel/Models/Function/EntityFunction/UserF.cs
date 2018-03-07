@@ -31,5 +31,26 @@ namespace UvoyageTravel.Models.Function.EntityFunction
             }
             return Accounts;
         }
+
+        public Account Login(string username, string password)
+        {
+            var result = db.Users.Where(a =>
+                a.Username.Equals(username) &&
+                a.Password.Equals(password)).FirstOrDefault();
+            Account t = null;
+
+            if (result != null)
+            {
+                t = new Account();
+                t.username = result.Username;
+                t.password = result.Password;
+                t.Roles = (from a in db.Roles
+                           join b in db.UserInRoles
+                           on a.ID equals b.ID_Role
+                           where (a.RoleName != null && b.Username.Equals(username))
+                           select a.RoleName).ToList();
+            }
+            return t;
+        }
     }
 }

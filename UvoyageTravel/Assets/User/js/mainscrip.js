@@ -42,5 +42,5 @@ $(document).ready(function () {
         e.preventDefault();
         $('.recommended-hotels a').removeClass('active');
         $(this).addClass('active');
-    })
+    });
 });

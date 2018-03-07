@@ -185,14 +185,15 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201803070753146_Modified-KhachsanTable-and-PhongTable.cs" />
-    <Compile Include="Migrations\201803070753146_Modified-KhachsanTable-and-PhongTable.Designer.cs">
-      <DependentUpon>201803070753146_Modified-KhachsanTable-and-PhongTable.cs</DependentUpon>
+    <Compile Include="Migrations\201803071842180_init-database.cs" />
+    <Compile Include="Migrations\201803071842180_init-database.Designer.cs">
+      <DependentUpon>201803071842180_init-database.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Entity\Account.cs" />
     <Compile Include="Models\Entity\BaiViet.cs" />
     <Compile Include="Models\Entity\Cart.cs" />
+    <Compile Include="Models\Entity\CartAjax.cs" />
     <Compile Include="Models\Entity\CartItem.cs" />
     <Compile Include="Models\Entity\ChiTietDatPhong.cs" />
     <Compile Include="Models\Entity\DatPhong.cs" />
@@ -7780,6 +7781,8 @@
     <Content Include="Views\Login\Login.cshtml" />
     <Content Include="Views\Order\DatPhong.cshtml" />
     <Content Include="Views\Home\DanhSachKhachSan.cshtml" />
+    <Content Include="Views\Shared\_DanhSachKhachSan.cshtml" />
+    <Content Include="Views\Shared\_DanhSachPhong.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -7804,8 +7807,8 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201803070753146_Modified-KhachsanTable-and-PhongTable.resx">
-      <DependentUpon>201803070753146_Modified-KhachsanTable-and-PhongTable.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201803071842180_init-database.resx">
+      <DependentUpon>201803071842180_init-database.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

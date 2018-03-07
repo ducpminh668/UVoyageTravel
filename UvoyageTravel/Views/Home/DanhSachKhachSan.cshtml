@@ -162,7 +162,7 @@
                                 <div class="col-md-3">
                                     <div class="img-chitiet">
                                         <span class="have_breakfast">Bao bữa sáng</span>
-                                        <img src="~/Assets/User/images/106957226.jpg" alt="" width="100%">
+                                        <img src="~/Assets/User/images/106957226.jpg" alt="">
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-sm-6 col-xs-8 detail-hotel">
@@ -177,7 +177,7 @@
                                 <div class="col-md-3 col-sm-3 col-xs-3 box-price">
                                     <p class="price">Giá cho 1 đêm</p>
                                     <p class="price-detail">@ks.GiaTien.GetValueOrDefault(0).ToString("N0") ₫</p>
-                                    <a class="btn-datngay" href="">Đặt ngay</a>
+                                    <a class="btn-datngay" href=@Url.Action("DatPhong", "Order", new { id = @ks.ID}) >Đặt ngay</a>
                                 </div>
                             </div>
                         </div>
