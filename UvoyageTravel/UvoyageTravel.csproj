@@ -184,9 +184,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201803050811066_InitialCreate.cs" />
-    <Compile Include="Migrations\201803050811066_InitialCreate.Designer.cs">
-      <DependentUpon>201803050811066_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\201803070459341_init-database.cs" />
+    <Compile Include="Migrations\201803070459341_init-database.Designer.cs">
+      <DependentUpon>201803070459341_init-database.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Entity\Account.cs" />
@@ -206,6 +206,7 @@
     <Compile Include="Models\Entity\User.cs" />
     <Compile Include="Models\Entity\UserInRole.cs" />
     <Compile Include="Models\Entity\UvoyageDBContext.cs" />
+    <Compile Include="Models\Function\EntityFunction\PhongKhachSanF.cs" />
     <Compile Include="Models\Function\EntityFunction\UserF.cs" />
     <Compile Include="Models\Function\FileExt.cs" />
     <Compile Include="Models\Function\ImportExcel.cs" />
@@ -7029,6 +7030,7 @@
     <Content Include="Assets\User\libs\OwlCarousel2-2.2.1\test\unit\core.js" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Footer.html" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -7755,6 +7757,7 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="Views\Shared\Footer.html" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -7769,12 +7772,13 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Cart\ThanhToan.cshtml" />
+    <Content Include="Views\Login\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Content\Upload\" />
-    <Folder Include="Views\Login\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -7794,8 +7798,8 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201803050811066_InitialCreate.resx">
-      <DependentUpon>201803050811066_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201803070459341_init-database.resx">
+      <DependentUpon>201803070459341_init-database.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

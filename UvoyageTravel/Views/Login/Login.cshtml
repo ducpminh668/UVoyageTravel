@@ -1,0 +1,93 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="bread-crumb">
+    <div class="container">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+            <li class="breadcrumb-item active">Đăng nhập</li>
+        </ol>
+    </div>
+</div> <!-- het breadcrumb -->
+<div class="container login-box">
+    <div class="row">
+        <div class="col-md-4 offset-md-1">
+            <div class="form-box">
+                <form action="" method="get" accept-charset="utf-8">
+                    <h4>Đăng nhập</h4>
+                    <div class="social-login">
+                        <span>Bạn có thể đăng nhập bằng:</span>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="facebook-login-btn">
+                                    <a href="">
+                                        <i class="fa fa-facebook facebook-icon-line-right"></i>
+                                        Facebook
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="google-plus-login-btn">
+                                    <a href="">
+                                        <i class="fa fa-google-plus google-plus-icon-line-right"></i>
+                                        Google
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-bottom">
+                        <div class="form-group">
+                            <input type="text" class="required form-control" name="username" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="required form-control" name="password" value="" placeholder="Mật khẩu" autocomplete="off">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="save-password col-md-6 col-6">
+                            <input type="checkbox" value="1" name="remember">Lưu mật khẩu
+                        </div>
+                        <div class="forget-password col-md-6 col-6">
+                            <a href="">Quên mật khẩu? </a>
+                        </div>
+                    </div>
+                    <div style="text-align: center;">
+                        <button type="submit" class="btn btn-primary btn-login">Đăng nhập</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-4 offset-md-2">
+            <div class="form-box">
+                <form action="" method="get" accept-charset="utf-8">
+                    <h4>Đăng kí</h4>
+                    <div class="social-login">
+                        <span>Đăng kí mới tài khoản</span>
+                    </div>
+                    <div class="form-resister form-bottom">
+                        <div class="form-group">
+                            <input type="text" class="required form-control" name="username" placeholder="Họ và tên đệm">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="required form-control" name="username" placeholder="Tên">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="required form-control" name="username" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="required form-control" name="password" value="" placeholder="Mật khẩu" autocomplete="off">
+                        </div>
+                    </div>
+                    <div style="text-align: center;">
+                        <button type="submit" class="btn btn-primary btn-login">Đăng kí</button>
+                    </div>
+                    <p class="term">Qua việc đăng ký tài khoản trên website, bạn đồng ý hoàn toàn với các <a href="">Điều khoản, điều kiện </a> cũng như các <a href="">Chính sách bảo mật </a> của chúng tôi.</p>
+                </form>
+            </div>
+        </div>
+    </div>
+</div> <!-- het login-box -->

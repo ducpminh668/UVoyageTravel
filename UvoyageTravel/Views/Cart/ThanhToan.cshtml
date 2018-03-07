@@ -1,0 +1,205 @@
+﻿@using UvoyageTravel.Models.Entity;
+@model List<CartItem>
+@{
+    ViewBag.Title = "ThanhToan";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    string Total = ((decimal)ViewBag.Total).ToString("N0");
+}
+<!--Bread-crumb-->
+<div class="bread-crumb">
+    <div class="container">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
+            <li class="breadcrumb-item active">Thanh toán</li>
+        </ol>
+    </div>
+</div>
+<!-- het breadcrumb -->
+<!--NoiDungThanhToan-->
+<div class="noidungthanhtoan">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 thongtinchitiet">
+                <p class="hidden-xs">Nhập thông tin chi tiết của bạn</p>
+                <input class="form-control" type="text" name="" size="30" maxlength="50" value="" placeholder="Họ và tên đệm*" required>
+                <input class="form-control" type="text" id="name" name="" size="30" maxlength="50" value="" placeholder="Tên*" required>
+                <input class="form-control" type="text" id="phone" name="" size="30" maxlength="50" value="" placeholder="Số Điện Thoại*" required>
+                <input class="form-control" type="text" id="email" name="" size="30" maxlength="50" value="" placeholder="Email*" required>
+                <p class="request-notice">
+                    <span style="" class="fa fa-question-circle"></span> Tôi có thêm yêu cầu khác
+                </p>
+                <textarea name="notes" class="form-control" cols="45" rows="4"></textarea>
+            </div>
+            <!-- het thongtinchitiet -->
+            <div class="col-md-6 tongtiengiohang">
+                <div class="supporter row">
+                    <div class="text col--12 col-sm-9">
+                        Nếu có bất kỳ thắc mắc nào, vui lòng liên hệ với tư vấn viên UVoyageTravel.vn theo hotline miễn phí : <span class="text-primary">0485693546854</span>
+                    </div>
+                    <div class="hidden-xs col-sm-3">
+                        <img class="support-icon" src="~/Assets/User/images/iconsupporter.jpg">
+                    </div>
+                </div>
+                <!-- het supporter -->
+                <div class="room-info">
+                    <div class="room-title">
+                        <strong>Thông tin đặt phòng</strong>
+                    </div>
+                    <div class="room-content">
+                        <div class="hotel-info row">
+                            <div class="hidden-xs col-sm-2">
+                                <a href=""><img src="~/Assets/User/Images/66438217.jpg" alt="" width="80" height="80"></a>
+                            </div>
+                            <div class="col--12 col-sm-10">
+                                <div class="hotel-name">Melia Hanoi</div>
+                                <div>
+                                    <span class="hotel-rating star5"></span>
+                                </div>
+                                <div class="address">
+                                    <i class="fa fa-map-marker"></i>&nbsp;44B Ly Thuong Kiet Street
+                                </div>
+                                <div class="hidden-xs room-checkout-info">
+                                    <span><i title="Ngày nhận phòng" class="fa fa-calendar-check-o"> </i>&nbsp;Thứ sáu, 09 - 02 - 2018 </span><br>
+                                    <span><i title="Ngày trả phòng" class="fa fa-calendar-times-o">&nbsp;</i>Thứ bảy, 10 - 02 - 2018</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- het hotel-info -->
+                        <div class="rooms">
+                            <div class="row head-column">
+                                <div class="col-9 col-md-9">Thông tin phòng</div>
+                                <div class="col-3 col-md-3 text-right">Giá</div>
+                            </div>
+                            <!-- het head-column -->
+
+                            @foreach (CartItem item in Model)
+                            {
+                                <!--Room item-->
+                                <div class="row room-item">
+                                    <div class="col-7 col-sm-9 room-list-info">
+                                        <p class="room-name"><strong>@item.Phong.TenPhong x @item.Quantity</strong></p>
+                                    </div>
+                                    <div class="col-5 col-sm-3 text-right">
+                                        <p style="color:#ff0e09;">
+                                            @{
+                                                string TienPhong = (item.Phong.GiaTien.GetValueOrDefault(0) * item.Quantity).ToString("N0");
+                                            }
+                                            @TienPhong
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- het room-item -->
+                                                }
+
+                            @*<div class="row room-item">
+                                    <div class="col-7 col-sm-9 room-list-info">
+                                        <p class="room-name"><strong>Phòng Deluxe - Không hoàn tiền - WiFi miễn phí x 3</strong></p>
+                                    </div>
+                                    <div class="col-5 col-sm-3 text-right">
+                                        <p style="color:#ff0e09;">7,237,169 ₫</p>
+                                    </div>
+                                </div>
+                                <!-- het room-item -->
+                                <div class="row room-item">
+                                    <div class="col-7 col-sm-9 room-list-info">
+                                        <p class="room-name"><strong>Phòng Deluxe - Cho 1 người ở - Không hoàn tiền - Bao bữa sáng - WiFi miễn phí x 1</strong></p>
+                                    </div>
+                                    <div class="col-5 col-sm-3 text-right">
+                                        <p style="color:#ff0e09;">2,831,936 ₫</p>
+                                    </div>
+                                </div>
+                                <!-- het room-item -->*@
+                            <div class="apply row">
+                                <div class="col-12 col-sm-5 text-right"><p>Có mã giảm giá? Áp dụng ngay:</p></div>
+                                <div class="col-7 col-sm-4 text-right">
+                                    <input type="text" placeholder="" class="form-control" id="coupon-code-checkout">
+                                </div>
+                                <div class="col-5 col-sm-3 text-right">
+                                    <a href="" class="btn confirm btn-coupon-apply">Áp dụng</a>
+                                </div>
+                            </div>
+                            <!-- het apply-rooms -->
+                            <div class="room-total">
+                                <div class="row">
+                                    <div class="col-5 col-sm-8 text-right">
+                                        <span>Tổng tiền:</span><br>
+                                    </div>
+                                    <div class="col-7 col-sm-4">
+                                        <div class="tright" id="total" total="10067768.75">
+                                            @Total ₫
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <p style="font-size:12px;color:#999;" class="text-right">Đã bao gồm phí dịch vụ và VAT</p>
+
+                                <div class="row" id="discount-block" style="display:none">
+                                    <div class="col-8 col-sm-8 text-right">
+                                        Giảm giá:
+                                    </div>
+                                    <div class="col-4 col-sm-4">
+                                        <div class="tright" id="discount"></div>
+                                    </div>
+                                </div>
+
+                                <div class="row" id="total-discount-block" style="display:none">
+                                    <div class="col-8 text-right">
+                                        Tổng tiền:
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="tright" id="total-discount-block-desc">
+                                            10,067,769 ₫
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> <!-- het room total -->
+                        </div>
+                        <!-- het rooms -->
+                    </div>
+                </div>
+                <!-- het room-info -->
+            </div>
+        </div>
+        <div class="payment-select">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-4 payment-tab">
+                        <div class="payment-tab-head">
+                            <strong>Chọn phương thức thanh toán</strong>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <input type="radio" name="payment-select-rd">
+                                    <label for="hoan-kiem"> Thanh toán tại khách sạn</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="payment-select-rd">
+                                    <label for="hoan-kiem"> Thanh toán qua thẻ ngân hàng nội địa (ATM) hoặc thanh toán qua Nganluong.vn</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="payment-select-rd">
+                                    <label for="hoan-kiem"> Ví điện tử Vimo</label>
+                                </li>
+                                <li>
+                                    <input type="radio" name="payment-select-rd">
+                                    <label for="hoan-kiem"> Thanh toán qua MPOS</label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- het payment-tab -->
+                    <div class="col-12 col-sm-8 payment-content">
+                        <div class="payment-form-div"></div>
+                        <div class="check-form-footer">
+                            <input type="checkbox">
+                            <label style="display: inline;"> Tôi đồng ý với các <a href=""> Điều khoản và Điều kiện </a> của Uvoyage.vn</label>
+                        </div>
+                        <div class="center-button">
+                            <button class="btn btn-primary hotel-book" type="button" name="btnSubmit" id="submitpayment">Thanh toán ngay</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- het noi dung thanh toán -->

@@ -14,6 +14,14 @@ namespace UvoyageTravel.Controllers
         {
             return View();
         }
+
+        [HttpPost]
+        public ActionResult Login(User User)
+        {
+            
+            //Change Return Redirec
+            return View();
+        }
         
     }
 }

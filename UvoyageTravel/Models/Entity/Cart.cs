@@ -64,7 +64,7 @@ namespace UvoyageTravel.Models.Entity
             _ListCart.Clear();
         }
 
-        public IEnumerable<CartItem> Carts
+        public IEnumerable<CartItem> ListCarts
         {
             get { return _ListCart; }
         }
