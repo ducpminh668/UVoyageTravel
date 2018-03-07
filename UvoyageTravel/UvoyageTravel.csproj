@@ -185,9 +185,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201803070613175_cuong-init-database.cs" />
-    <Compile Include="Migrations\201803070613175_cuong-init-database.Designer.cs">
-      <DependentUpon>201803070613175_cuong-init-database.cs</DependentUpon>
+    <Compile Include="Migrations\201803070753146_Modified-KhachsanTable-and-PhongTable.cs" />
+    <Compile Include="Migrations\201803070753146_Modified-KhachsanTable-and-PhongTable.Designer.cs">
+      <DependentUpon>201803070753146_Modified-KhachsanTable-and-PhongTable.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Entity\Account.cs" />
@@ -7802,8 +7802,8 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201803070613175_cuong-init-database.resx">
-      <DependentUpon>201803070613175_cuong-init-database.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201803070753146_Modified-KhachsanTable-and-PhongTable.resx">
+      <DependentUpon>201803070753146_Modified-KhachsanTable-and-PhongTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

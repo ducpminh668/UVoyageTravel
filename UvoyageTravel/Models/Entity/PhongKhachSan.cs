@@ -31,6 +31,9 @@ namespace UvoyageTravel.Models.Entity
         public bool? GomBuaAn { get; set; }
 
         [StringLength(500)]
+        public string Img { get; set; }
+
+        [StringLength(500)]
         public string MoTa { get; set; }
 
         public int? KhachSan_ID { get; set; }

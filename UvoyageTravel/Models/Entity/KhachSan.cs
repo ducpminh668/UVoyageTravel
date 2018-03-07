@@ -25,6 +25,9 @@ namespace UvoyageTravel.Models.Entity
         [StringLength(50)]
         public string SoDienThoai { get; set; }
 
+        [StringLength(500)]
+        public string Img { get; set; }
+
         [StringLength(250)]
         public string ThongTinLienHe { get; set; }
 

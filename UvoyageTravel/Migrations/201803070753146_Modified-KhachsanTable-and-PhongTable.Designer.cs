@@ -7,13 +7,13 @@ namespace UvoyageTravel.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class cuonginitdatabase : IMigrationMetadata
+    public sealed partial class ModifiedKhachsanTableandPhongTable : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(cuonginitdatabase));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(ModifiedKhachsanTableandPhongTable));
         
         string IMigrationMetadata.Id
         {
-            get { return "201803070613175_cuong-init-database"; }
+            get { return "201803070753146_Modified-KhachsanTable-and-PhongTable"; }
         }
         
         string IMigrationMetadata.Source

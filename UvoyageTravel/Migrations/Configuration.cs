@@ -1,4 +1,4 @@
-namespace UvoyageTravel.Migrations
+﻿namespace UvoyageTravel.Migrations
 {
     using System;
     using System.Data.Entity.Migrations;
@@ -36,9 +36,50 @@ namespace UvoyageTravel.Migrations
 
             context.Slides.AddOrUpdate(
                 p => p.ID,
-                new Models.Entity.Slide {Img = "banner-1.png", Description = "Uvoyage-banner-1" },
+                new Models.Entity.Slide { Img = "banner-1.png", Description = "Uvoyage-banner-1" },
                 new Models.Entity.Slide { Img = "banner-2.png", Description = "Uvoyage-banner-2" }
                 );
+
+            context.KhachSans.AddOrUpdate(
+                p => p.ID,
+                new Models.Entity.KhachSan { TenKhachSan = "Melia Hanoi", DiaChi = "44B Ly Thuong Kiet Street, Quận Hoàn Kiếm, Hà Nội", GiaTien = 4707109, UuTien = 1, Img = "106957226.jpg" },
+                new Models.Entity.KhachSan { TenKhachSan = "Somerset Grand Hanoi", DiaChi = "44B Ly Thuong Kiet Street, Quận Hoàn Kiếm, Hà Nội", GiaTien = 3681627, UuTien = 2, Img = "106957226.jpg" },
+                new Models.Entity.KhachSan { TenKhachSan = "Somerset West Point Hanoi", DiaChi = "44B Ly Thuong Kiet Street, Quận Hoàn Kiếm, Hà Nội", GiaTien = 2500865, UuTien = 3, Img = "106957226.jpg" },
+                new Models.Entity.KhachSan { TenKhachSan = "Crowne Plaza West Hanoi", DiaChi = "44B Ly Thuong Kiet Street, Quận Hoàn Kiếm, Hà Nội", GiaTien = 4707337, UuTien = 4, Img = "106957226.jpg" }
+                );
+
+            context.PhongKhachSans.AddOrUpdate(
+                p => p.ID,
+                new Models.Entity.PhongKhachSan { TenPhong = "Phòng Premium Giường Đôi - Cho 1 người ở - Không hoàn tiền - Bao bữa sáng - WiFi miễn phí", Img = "detail-room.jpg", KhachSan_ID = 1 },
+                new Models.Entity.PhongKhachSan { TenPhong = "Phòng Premium Giường Đôi - Không hoàn tiền - Bao bữa sáng - WiFi miễn phí", Img = "detail-room.jpg", KhachSan_ID = 1 },
+                new Models.Entity.PhongKhachSan { TenPhong = "Phòng Grand Premium Giường Đôi - Cho 1 người ở - Không hoàn tiền - Bao bữa sáng - WiFi miễn phí", Img = "detail-room.jpg", KhachSan_ID = 1 },
+                new Models.Entity.PhongKhachSan { TenPhong = "Phòng Grand Premium Giường Đôi - Cho 1 người ở - Không hoàn tiền - Bao bữa sáng - WiFi miễn phí", Img = "detail-room.jpg", KhachSan_ID = 1 },
+                new Models.Entity.PhongKhachSan { TenPhong = "Phòng Grand Premium Giường Đôi - Không hoàn tiền - Bao bữa sáng - WiFi miễn phí", Img = "detail-room.jpg", KhachSan_ID = 1 },
+                new Models.Entity.PhongKhachSan { TenPhong = "Phòng Level Premium - Cho 1 người ở - Không hoàn tiền - Bao bữa sáng - WiFi miễn phí", Img = "detail-room.jpg", KhachSan_ID = 1 },
+                new Models.Entity.PhongKhachSan { TenPhong = "Phòng Level Premium - Không hoàn tiền - Bao bữa sáng - WiFi miễn phí", Img = "detail-room.jpg", KhachSan_ID = 1 },
+                new Models.Entity.PhongKhachSan { TenPhong = "The Level Suite - Không hoàn tiền - Bao bữa sáng - WiFi miễn phí", Img = "detail-room.jpg", KhachSan_ID = 1 },
+                new Models.Entity.PhongKhachSan { TenPhong = "The Level Suite - Cho 1 người ở - Không hoàn tiền - Bao bữa sáng - WiFi miễn phí", Img = "detail-room.jpg", KhachSan_ID = 1 },
+                new Models.Entity.PhongKhachSan { TenPhong = "Phòng Hilton Deluxe 2 Giường đơn - Cho 1 người ở - Không hoàn tiền", Img = "detail-room.jpg", KhachSan_ID = 2 },
+                new Models.Entity.PhongKhachSan { TenPhong = "Phòng Hilton Deluxe 2 Giường đơn - Không hoàn tiền", Img = "detail-room.jpg", KhachSan_ID = 2 },
+                new Models.Entity.PhongKhachSan { TenPhong = "Phòng Hilton Deluxe 2 Giường đơn - Cho 1 người ở - Không hoàn tiền - Bao bữa sáng", Img = "detail-room.jpg", KhachSan_ID = 2 },
+                new Models.Entity.PhongKhachSan { TenPhong = "Phòng Hilton Executive 2 Giường đơn có quyền lui tới Executive Lounge - Cho 1 người ở - Không hoàn tiền", Img = "detail-room.jpg", KhachSan_ID = 2 },
+                new Models.Entity.PhongKhachSan { TenPhong = "Phòng Hilton Executive 2 Giường đơn có quyền lui tới Executive Lounge - Không hoàn tiền", Img = "detail-room.jpg", KhachSan_ID = 2 },
+                new Models.Entity.PhongKhachSan { TenPhong = "Phòng Hilton Executive 2 Giường đơn có quyền lui tới Executive Lounge - Không hoàn tiền - Bao bữa sáng", Img = "detail-room.jpg", KhachSan_ID = 2 },
+                new Models.Entity.PhongKhachSan { TenPhong = "Phòng Hilton Executive Giường đôi có quyền lui tới Executive Lounge - Cho 1 người ở - Không hoàn tiền", Img = "detail-room.jpg", KhachSan_ID = 2 },
+                new Models.Entity.PhongKhachSan { TenPhong = "Phòng Hilton Executive Giường đôi có quyền lui tới Executive Lounge - Cho 1 người ở - Không hoàn tiền - Bao bữa sáng", Img = "detail-room.jpg", KhachSan_ID = 2 },
+                new Models.Entity.PhongKhachSan { TenPhong = "Phòng Hilton Executive Giường đôi có quyền lui tới Executive Lounge - Cho 1 người ở - Không hoàn tiền - Bao bữa sáng2", Img = "detail-room.jpg", KhachSan_ID = 2 },
+                new Models.Entity.PhongKhachSan { TenPhong = "Studio Executive - Không hoàn tiền - WiFi miễn phí", Img = "detail-room.jpg", KhachSan_ID = 3 },
+                new Models.Entity.PhongKhachSan { TenPhong = "Căn hộ Deluxe 1 Phòng ngủ - Không hoàn tiền - WiFi miễn phí", Img = "detail-room.jpg", KhachSan_ID = 3 },
+                new Models.Entity.PhongKhachSan { TenPhong = "Căn hộ Premier 2 phòng ngủ - Không hoàn tiền - WiFi miễn phí", Img = "detail-room.jpg", KhachSan_ID = 3 },
+                new Models.Entity.PhongKhachSan { TenPhong = "Căn hộ Executive 3 phòng ngủ - Không hoàn tiền - WiFi miễn phí", Img = "detail-room.jpg", KhachSan_ID = 3 },
+                new Models.Entity.PhongKhachSan { TenPhong = "Phòng Deluxe 2 giường đơn - Hút thuốc. - Không hoàn tiền - WiFi miễn phí", Img = "detail-room.jpg", KhachSan_ID = 3 }, 
+                new Models.Entity.PhongKhachSan { TenPhong = "Phòng Deluxe 2 giường đơn - Hút thuốc. - Không hoàn tiền - Bao bữa sáng - WiFi miễn phí", Img = "detail-room.jpg", KhachSan_ID = 4 },
+                new Models.Entity.PhongKhachSan { TenPhong = "Phòng Premier có Giường cỡ King - Hút thuốc - Không hoàn tiền - WiFi miễn phí", Img = "detail-room.jpg", KhachSan_ID = 4 },
+                new Models.Entity.PhongKhachSan { TenPhong = "Phòng Club có giường cỡ king - Không được hút thuốc - Không hoàn tiền - WiFi miễn phí", Img = "detail-room.jpg", KhachSan_ID = 4 },
+                new Models.Entity.PhongKhachSan { TenPhong = "Phòng Club có giường cỡ king - Không được hút thuốc - Không hoàn tiền - Bao bữa sáng - WiFi miễn phí", Img = "detail-room.jpg", KhachSan_ID = 4 }
+
+                );
+
         }
     }
 }
