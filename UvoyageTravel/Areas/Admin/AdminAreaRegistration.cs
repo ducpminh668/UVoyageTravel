@@ -2,17 +2,17 @@
 
 namespace UvoyageTravel.Areas.Admin
 {
-    public class AdminAreaRegistration : AreaRegistration 
+    public class AdminAreaRegistration : AreaRegistration
     {
-        public override string AreaName 
+        public override string AreaName
         {
-            get 
+            get
             {
                 return "Admin";
             }
         }
 
-        public override void RegisterArea(AreaRegistrationContext context) 
+        public override void RegisterArea(AreaRegistrationContext context)
         {
             context.MapRoute(
                 "Admin_default",
@@ -20,6 +20,14 @@ namespace UvoyageTravel.Areas.Admin
                 new { action = "Index", id = UrlParameter.Optional },
                 new[] { "UvoyageTravel.Areas.Admin.Controllers" }
             );
+
+            context.MapRoute(
+               "login",
+               "admin",
+               new { controller = "Login", action = "Login" },
+               new[] { "UvoyageTravel.Controllers" }
+
+           );
         }
     }
 }

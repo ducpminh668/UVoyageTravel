@@ -79,6 +79,29 @@
 
                );
 
+            context.ThanhPhoes.AddOrUpdate(
+                p => p.ID,
+                new Models.Entity.ThanhPho { ID = "ha-noi", TenThanhPho = "Ha Noi", Ordering = 1, Img = "ha-noi.jpg", HotStatus = true },
+                new Models.Entity.ThanhPho { ID = "ha-long", TenThanhPho = "Ha Long", Ordering = 2, Img = "ha-long.jpg", HotStatus = true },
+                new Models.Entity.ThanhPho { ID = "sa-pa", TenThanhPho = "Sa Pa", Ordering = 3, Img = "ha-long.jpg", HotStatus = true },
+                new Models.Entity.ThanhPho { ID = "hue", TenThanhPho = "Hue", Ordering = 5, Img = "ha-long.jpg", HotStatus = true },
+                new Models.Entity.ThanhPho { ID = "da-nang", TenThanhPho = "Da nang", Ordering = 6, Img = "ha-long.jpg", HotStatus = true },
+                new Models.Entity.ThanhPho { ID = "ho-chi-minh", TenThanhPho = "Ho Chi Minh", Ordering = 7, Img = "ha-noi.jpg", HotStatus = true },
+                new Models.Entity.ThanhPho { ID = "da-lat", TenThanhPho = "Da Lat", Ordering = 8, Img = "ha-noi.jpg", HotStatus = true },
+                new Models.Entity.ThanhPho { ID = "phu-quoc", TenThanhPho = "Phu Quoc", Ordering = 9, Img = "ha-long.jpg", HotStatus = true },
+                new Models.Entity.ThanhPho { ID = "khanh-hoa", TenThanhPho = "Khanh-Hoa", Ordering = 9, Img = "ha-long.jpg", HotStatus = true }
+                );
+
+            context.QuanHuyens.AddOrUpdate(
+                p => p.ID,
+                new Models.Entity.QuanHuyen { ID = "thanh-tri", TenQuanHuyen = "Thanh Tri", ThanhPho_ID = "ha-noi" },
+                new Models.Entity.QuanHuyen { ID = "hoang-mai", TenQuanHuyen = "Thanh Tri", ThanhPho_ID = "ha-noi" },
+                new Models.Entity.QuanHuyen { ID = "ba-dinh", TenQuanHuyen = "Thanh Tri", ThanhPho_ID = "ha-noi" },
+                new Models.Entity.QuanHuyen { ID = "cau-giay", TenQuanHuyen = "Thanh Tri", ThanhPho_ID = "ha-noi" },
+                new Models.Entity.QuanHuyen { ID = "long-bien", TenQuanHuyen = "Thanh Tri", ThanhPho_ID = "ha-noi" },
+                new Models.Entity.QuanHuyen { ID = "hai-ba-trung", TenQuanHuyen = "Thanh Tri", ThanhPho_ID = "ha-noi" }
+                );
+
             context.PhongKhachSans.AddOrUpdate(
                 p => p.ID,
                 new Models.Entity.PhongKhachSan { TenPhong = "Phòng Premium Giường Đôi - Cho 1 người ở - Không hoàn tiền - Bao bữa sáng - WiFi miễn phí", Img = "detail-room.jpg", KhachSan_ID = 1 , GiaTien = 500000},

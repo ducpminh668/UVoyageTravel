@@ -615,6 +615,7 @@ li label {
 .khoi-recommend-address img {
 	height: 250px;
 	border-radius: 3px;
+	width:  100%;
 }
 
 .khoi-recommend-address .layer-gradient {

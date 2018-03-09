@@ -19,5 +19,16 @@ namespace UvoyageTravel.Models.Function.EntityFunction
         {
             get { return db.KhachSans;  }
         } 
+
+        public IEnumerable<KhachSan> KhachSanByCity(string city)
+        {
+            var a = from ks in db.KhachSans
+                    join qh in db.QuanHuyens on ks.QuanHuyen_ID equals qh.ID
+                    join tp in db.ThanhPhoes on qh.ThanhPho_ID equals tp.ID
+                    where (tp.ID == city || qh.ID == city)
+                    select ks;
+            return a;
+        }
+        
     }
 }

@@ -14,11 +14,23 @@ namespace UvoyageTravel
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
+              name: "danhsach",
+              url: "danh-sach-khach-san/{id}",
+              defaults: new { controller = "Home", action = "DanhSachKhachSan", id = UrlParameter.Optional },
+              namespaces: new[] { "UvoyageTravel.Controllers" }
+          );
+
+            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional },
                 namespaces :new[] { "UvoyageTravel.Controllers" }
             );
+
+
+
+           
+
         }
     }
 }

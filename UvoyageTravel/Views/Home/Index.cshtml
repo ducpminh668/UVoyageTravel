@@ -131,94 +131,66 @@
 <!-- Het phan hotdeal-today -->
 <!-- Phan diem du lich noi tieng -->
 <div class="container goiy-dia-diem">
-    <h5 class="module-title">Các điểm du lich nổi tiếng</h5>
-    <div class="row mot-dong-recomened-address">
-        <div class="col-md-6 col-sm-4 col-4">
-            <div class="khoi-recommend-address">
-                <a href="">
-                    <img src="~/Assets/User/Images/ha-noi.jpg" class="img-fluid" alt="">
-                    <span class="layer-gradient"></span>
-                    <span class="recomened-add-title">Hà Nội</span>
-                </a>
+    @{
+        IEnumerable<ThanhPho>
+            Cities = ViewBag.Cities;
+        List<ThanhPho>
+            HotCities = Cities.Where(x => x.HotStatus == true).OrderBy(x => x.Ordering).Take(9).ToList();
+        for (int i = 0; i < 3; i++)
+        {
+            <div class="row mot-dong-recomened-address">
+                @foreach (ThanhPho city in HotCities.Skip(i * 3).Take(3))
+                {
+                    string ClassAttr = "col-md-3 col-sm-4 col-4";
+                    if (city.Ordering == 1 || city.Ordering == 6 || city.Ordering == 7)
+                    {
+                        ClassAttr = "col-md-6 col-sm-4 col-4";
+                    }
+                    <div class="@ClassAttr">
+                        <div class="khoi-recommend-address">
+                            <a href="@Url.RouteUrl("danhsach", new { id=city.ID })">
+                                <img src="~/Assets/User/Images/@city.Img" class="img-fluid" alt="">
+                                <span class="layer-gradient"></span>
+                                <span class="recomened-add-title">@city.TenThanhPho</span>
+                            </a>
+                        </div>
+                    </div>
+                }
             </div>
-        </div>
-        <div class="col-md-3 col-sm-4 col-4">
-            <div class="khoi-recommend-address">
-                <a href="">
-                    <img src="~/Assets/User/Images/ha-long.jpg" width="100%" alt="">
-                    <span class="layer-gradient"></span>
-                    <span class="recomened-add-title">Hạ Long</span>
-                </a>
+        }
+    }
+
+    @*<div class="row mot-dong-recomened-address">
+            <div class="col-md-6 col-sm-4 col-4">
+                <div class="khoi-recommend-address">
+                    <a href="@Url.RouteUrl(" Danhsach", new { id="ha-noi" })">
+                        <img src="~/Assets/User/Images/ha-noi.jpg" class="img-fluid" alt="">
+                        <span class="layer-gradient"></span>
+                        <span class="recomened-add-title">Hà Nội</span>
+                    </a>
+                </div>
             </div>
-        </div>
-        <div class="col-md-3 col-sm-4 col-4">
-            <div class="khoi-recommend-address">
-                <a href="">
-                    <img src="~/Assets/User/Images/sa-pa.jpg" width="100%" alt="">
-                    <span class="layer-gradient"></span>
-                    <span class="recomened-add-title">Hạ Long</span>
-                </a>
+            <div class="col-md-3 col-sm-4 col-4">
+                <div class="khoi-recommend-address">
+                    <a href="@Url.RouteUrl(" Danhsach", new { id="ha-noi" })">
+                        <img src="~/Assets/User/Images/ha-long.jpg" width="100%" alt="">
+                        <span class="layer-gradient"></span>
+                        <span class="recomened-add-title">Hạ Long</span>
+                    </a>
+                </div>
             </div>
-        </div>
-    </div> <!-- het 1 dong recommended -->
-    <div class="row mot-dong-recomened-address">
-        <div class="col-md-3 col-sm-4 col-4">
-            <div class="khoi-recommend-address">
-                <a href="">
-                    <img src="~/Assets/User/Images/ha-long.jpg" width="100%" alt="">
-                    <span class="layer-gradient"></span>
-                    <span class="recomened-add-title">Hạ Long</span>
-                </a>
+            <div class="col-md-3 col-sm-4 col-4">
+                <div class="khoi-recommend-address">
+                    <a href="@Url.RouteUrl(" Danhsach", new { id="ha-noi" })">
+                        <img src="~/Assets/User/Images/sa-pa.jpg" width="100%" alt="">
+                        <span class="layer-gradient"></span>
+                        <span class="recomened-add-title">Hạ Long</span>
+                    </a>
+                </div>
             </div>
-        </div>
-        <div class="col-md-3 col-sm-4 col-4">
-            <div class="khoi-recommend-address">
-                <a href="">
-                    <img src="~/Assets/User/Images/sa-pa.jpg" width="100%" alt="">
-                    <span class="layer-gradient"></span>
-                    <span class="recomened-add-title">Hạ Long</span>
-                </a>
-            </div>
-        </div>
-        <div class="col-md-6 col-sm-4 col-4">
-            <div class="khoi-recommend-address">
-                <a href="">
-                    <img src="~/Assets/User/Images/ha-noi.jpg" width="100%" alt="">
-                    <span class="layer-gradient"></span>
-                    <span class="recomened-add-title">Hà Nội</span>
-                </a>
-            </div>
-        </div>
-    </div> <!-- het 1 dong recommended -->
-    <div class="row mot-dong-recomened-address">
-        <div class="col-md-6 col-sm-4 col-4">
-            <div class="khoi-recommend-address">
-                <a href="">
-                    <img src="~/Assets/User/Images/ha-noi.jpg" width="100%" alt="">
-                    <span class="layer-gradient"></span>
-                    <span class="recomened-add-title">Hà Nội</span>
-                </a>
-            </div>
-        </div>
-        <div class="col-md-3 col-sm-4 col-4">
-            <div class="khoi-recommend-address">
-                <a href="">
-                    <img src="~/Assets/User/Images/ha-long.jpg" width="100%" alt="">
-                    <span class="layer-gradient"></span>
-                    <span class="recomened-add-title">Hạ Long</span>
-                </a>
-            </div>
-        </div>
-        <div class="col-md-3 col-sm-4 col-4">
-            <div class="khoi-recommend-address">
-                <a href="">
-                    <img src="~/Assets/User/Images/sa-pa.jpg" width="100%" alt="">
-                    <span class="layer-gradient"></span>
-                    <span class="recomened-add-title">Hạ Long</span>
-                </a>
-            </div>
-        </div>
-    </div> <!-- het 1 dong recommended -->
+
+        </div>*@
+    <!-- het 1 dong recommended -->
 </div>
 <!-- Het hpan diem du lich noi tieng -->
 <!-- phần cẩm nang du lịch -->

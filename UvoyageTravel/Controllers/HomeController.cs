@@ -16,13 +16,13 @@ namespace UvoyageTravel.Controllers
         {
             //lấy ảnh chuyền sang slide
             ViewBag.Slides = db.Slides;
-
+            ViewBag.Cities = db.ThanhPhoes.ToList();
             return View();
         }
 
-        public ActionResult DanhSachKhachSan()
+        public ActionResult DanhSachKhachSan(string id)
         {
-            List<KhachSan> KhachSans = new KhachSanF().KhachSans.ToList();
+            List<KhachSan> KhachSans = new KhachSanF().KhachSanByCity(id).ToList();
 
             return View(KhachSans);
         }

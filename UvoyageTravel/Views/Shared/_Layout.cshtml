@@ -35,11 +35,11 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <a href="#" title="UVOYAGE Trip"><img id="logo-banner" src="~/Assets/User/Images/logo.png" alt=""></a>
+        <a href="@Url.Action("Index", "Home")" title="UVOYAGE Trip"><img id="logo-banner" src="~/Assets/User/Images/logo.png" alt=""></a>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0" id="nav-menu">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Trang Chủ <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="@Url.Action("Index", "Home")">Trang Chủ <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">BLOG</a>
@@ -64,15 +64,21 @@
                 </li>
                 <li class="nav-item" id="DonViTien">
 
-                    <a class="nav-link" href="#">VND <span class="fa  fa-angle-down hidden-xs"></span></a>
+                    <a class="nav-link" href="#">
+                        <ul class="list-unstyled">
+                            <li>
+                                VND 
+                                <span class="fa fa-angle-down hidden-xs"></span>
+                            </li>
+                        </ul>
+                    </a>
                 </li>
                 <li class="btn-group" id="NgonNgu" style="margin:auto">
                     <a href="#">
                         <ul id="ngonNgu">
-                            <li>
+
                                 <img src="~/Assets/User/Images/vi.gif" alt="Tiếng Việt" title="Tiếng Việt" />
                                 <span class="fa fa-angle-down hidden-xs"></span>
-                            </li>
                         </ul>
                     </a>
                 </li>
