@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
 using UvoyageTravel.Models.Entity;
@@ -21,6 +22,27 @@ namespace UvoyageTravel.Controllers
             }
             ViewBag.Total = Total;
             return View(_ListCart);
+        }
+
+        [HttpPost]
+        public ActionResult ThanhToan(FormCollection f)
+        {
+            DatPhong Order = new DatPhong();
+            string hoten = f["hoten"];
+            string sodienthoai = f["sodienthoai"];
+            string email = f["email"];
+            string notes = f["notes"];
+
+            Order.HoTen = hoten;
+            Order.Mail = email;
+            Order.SoDienThoai = sodienthoai;
+            Order.NgayDat = DateTime.Now;
+            Order.YeuCauKhac = notes;
+            Order.IDPhieuDat = Guid.NewGuid();
+
+            DatPhong myOrder = new DatPhongF().Create(Order);
+            // change redirect to CamOnPage
+            return RedirectToAction("Index", "Home");
         }
 
         public ActionResult UpdateCart(int id, FormCollection f)
@@ -68,7 +90,7 @@ namespace UvoyageTravel.Controllers
             _Cart.AddItem(_Phong, Quantiy);
             Session["CartSession"] = _Cart;
 
-            if(string.IsNullOrEmpty(returnURL))
+            if (string.IsNullOrEmpty(returnURL))
             {
                 return RedirectToAction("Index", "Home");
             }

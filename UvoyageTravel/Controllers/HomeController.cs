@@ -26,6 +26,11 @@ namespace UvoyageTravel.Controllers
 
             return View(KhachSans);
         }
+
+        public ActionResult About()
+        {
+            return View();
+        }
         
     }
 }

@@ -88,8 +88,9 @@ namespace UvoyageTravel.Areas.Admin.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,TenThanhPho")] ThanhPho thanhPho)
+        public ActionResult Create([Bind(Exclude = "ID")] ThanhPho thanhPho)
         {
+            thanhPho.ID = StringConverter.toUnsignedString(thanhPho.TenThanhPho);
             if (ModelState.IsValid)
             {
                 db.ThanhPhoes.Add(thanhPho);
